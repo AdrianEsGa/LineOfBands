@@ -1,0 +1,141 @@
+C:\Datos\Proyectos\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.App.exe.config
+C:\Datos\Proyectos\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.App.exe
+C:\Datos\Proyectos\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.App.pdb
+C:\Datos\Proyectos\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.Common.dll
+C:\Datos\Proyectos\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.Database.dll
+C:\Datos\Proyectos\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.Opc.dll
+C:\Datos\Proyectos\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.Snap7.dll
+C:\Datos\Proyectos\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.Common.pdb
+C:\Datos\Proyectos\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.Database.pdb
+C:\Datos\Proyectos\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.Opc.pdb
+C:\Datos\Proyectos\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.Snap7.pdb
+C:\Datos\Proyectos\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.csprojAssemblyReference.cache
+C:\Datos\Proyectos\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.Forms.FrmLines.resources
+C:\Datos\Proyectos\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.Forms.FrmLinesSearch.resources
+C:\Datos\Proyectos\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.Forms.FrmStations.resources
+C:\Datos\Proyectos\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.Forms.FrmStationsSearch.resources
+C:\Datos\Proyectos\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.FrmMain.resources
+C:\Datos\Proyectos\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.Properties.Resources.resources
+C:\Datos\Proyectos\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.csproj.GenerateResource.cache
+C:\Datos\Proyectos\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.csproj.CoreCompileInputs.cache
+C:\Datos\Proyectos\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.csproj.CopyComplete
+C:\Datos\Proyectos\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.exe
+C:\Datos\Proyectos\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.pdb
+C:\Users\Ivan\Desktop\Nueva carpeta\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.App.exe.config
+C:\Users\Ivan\Desktop\Nueva carpeta\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.App.exe
+C:\Users\Ivan\Desktop\Nueva carpeta\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.App.pdb
+C:\Users\Ivan\Desktop\Nueva carpeta\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.Common.dll
+C:\Users\Ivan\Desktop\Nueva carpeta\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.Database.dll
+C:\Users\Ivan\Desktop\Nueva carpeta\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.Opc.dll
+C:\Users\Ivan\Desktop\Nueva carpeta\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.Snap7.dll
+C:\Users\Ivan\Desktop\Nueva carpeta\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.Common.pdb
+C:\Users\Ivan\Desktop\Nueva carpeta\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.Database.pdb
+C:\Users\Ivan\Desktop\Nueva carpeta\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.Opc.pdb
+C:\Users\Ivan\Desktop\Nueva carpeta\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.Snap7.pdb
+C:\Users\Ivan\Desktop\Nueva carpeta\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.csprojAssemblyReference.cache
+C:\Users\Ivan\Desktop\Nueva carpeta\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.Forms.FrmLines.resources
+C:\Users\Ivan\Desktop\Nueva carpeta\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.Forms.FrmLinesSearch.resources
+C:\Users\Ivan\Desktop\Nueva carpeta\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.Forms.FrmStations.resources
+C:\Users\Ivan\Desktop\Nueva carpeta\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.Forms.FrmStationsSearch.resources
+C:\Users\Ivan\Desktop\Nueva carpeta\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.FrmMain.resources
+C:\Users\Ivan\Desktop\Nueva carpeta\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.Properties.Resources.resources
+C:\Users\Ivan\Desktop\Nueva carpeta\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.csproj.GenerateResource.cache
+C:\Users\Ivan\Desktop\Nueva carpeta\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.csproj.CoreCompileInputs.cache
+C:\Users\Ivan\Desktop\Nueva carpeta\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.csproj.CopyComplete
+C:\Users\Ivan\Desktop\Nueva carpeta\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.exe
+C:\Users\Ivan\Desktop\Nueva carpeta\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.pdb
+D:\Datos\LINEOfBANDS29032019\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.App.exe.config
+D:\Datos\LINEOfBANDS29032019\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.App.exe
+D:\Datos\LINEOfBANDS29032019\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.App.pdb
+D:\Datos\LINEOfBANDS29032019\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.Common.dll
+D:\Datos\LINEOfBANDS29032019\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.Database.dll
+D:\Datos\LINEOfBANDS29032019\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.Opc.dll
+D:\Datos\LINEOfBANDS29032019\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.Snap7.dll
+D:\Datos\LINEOfBANDS29032019\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.Common.pdb
+D:\Datos\LINEOfBANDS29032019\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.Database.pdb
+D:\Datos\LINEOfBANDS29032019\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.Opc.pdb
+D:\Datos\LINEOfBANDS29032019\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.Snap7.pdb
+D:\Datos\LINEOfBANDS29032019\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.csprojAssemblyReference.cache
+D:\Datos\LINEOfBANDS29032019\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.Forms.FrmLines.resources
+D:\Datos\LINEOfBANDS29032019\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.Forms.FrmLinesSearch.resources
+D:\Datos\LINEOfBANDS29032019\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.Forms.FrmStations.resources
+D:\Datos\LINEOfBANDS29032019\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.Forms.FrmStationsSearch.resources
+D:\Datos\LINEOfBANDS29032019\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.FrmMain.resources
+D:\Datos\LINEOfBANDS29032019\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.Properties.Resources.resources
+D:\Datos\LINEOfBANDS29032019\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.csproj.GenerateResource.cache
+D:\Datos\LINEOfBANDS29032019\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.csproj.CoreCompileInputs.cache
+D:\Datos\LINEOfBANDS29032019\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.csproj.CopyComplete
+D:\Datos\LINEOfBANDS29032019\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.exe
+D:\Datos\LINEOfBANDS29032019\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.pdb
+D:\Datos\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.App.exe.config
+D:\Datos\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.App.exe
+D:\Datos\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.App.pdb
+D:\Datos\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.Common.dll
+D:\Datos\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.Database.dll
+D:\Datos\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.Opc.dll
+D:\Datos\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.Snap7.dll
+D:\Datos\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.Common.pdb
+D:\Datos\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.Database.pdb
+D:\Datos\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.Opc.pdb
+D:\Datos\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.Snap7.pdb
+D:\Datos\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.csprojAssemblyReference.cache
+D:\Datos\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.Forms.FrmLines.resources
+D:\Datos\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.Forms.FrmLinesSearch.resources
+D:\Datos\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.Forms.FrmStations.resources
+D:\Datos\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.Forms.FrmStationsSearch.resources
+D:\Datos\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.FrmMain.resources
+D:\Datos\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.Properties.Resources.resources
+D:\Datos\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.csproj.GenerateResource.cache
+D:\Datos\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.csproj.CoreCompileInputs.cache
+D:\Datos\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.csproj.CopyComplete
+D:\Datos\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.exe
+D:\Datos\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.pdb
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.csprojAssemblyReference.cache
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.Forms.FrmLines.resources
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.Forms.FrmLinesSearch.resources
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.Forms.FrmStations.resources
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.Forms.FrmStationsSearch.resources
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.FrmMain.resources
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.Properties.Resources.resources
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.csproj.GenerateResource.cache
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.csproj.CoreCompileInputs.cache
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.exe
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.pdb
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.App.exe.config
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.App.exe
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.App.pdb
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.Common.dll
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.Database.dll
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.Opc.dll
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.Snap7.dll
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.Common.pdb
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.Database.pdb
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.Opc.pdb
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.Snap7.pdb
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.csproj.CopyComplete
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands.App\bin\Debug\LineOfBands.App.exe.config
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands.App\bin\Debug\LineOfBands.App.exe
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands.App\bin\Debug\LineOfBands.App.pdb
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands.App\bin\Debug\LineOfBands.Common.dll
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands.App\bin\Debug\LineOfBands.Database.dll
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands.App\bin\Debug\LineOfBands.Opc.dll
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands.App\bin\Debug\LineOfBands.Snap7.dll
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands.App\bin\Debug\LineOfBands.Common.pdb
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands.App\bin\Debug\LineOfBands.Database.pdb
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands.App\bin\Debug\LineOfBands.Opc.pdb
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands.App\bin\Debug\LineOfBands.Snap7.pdb
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands.App\obj\Debug\LineOfBands.App.csprojAssemblyReference.cache
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands.App\obj\Debug\LineOfBands.App.Forms.FrmLines.resources
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands.App\obj\Debug\LineOfBands.App.Forms.FrmLinesSearch.resources
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands.App\obj\Debug\LineOfBands.App.Forms.FrmStations.resources
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands.App\obj\Debug\LineOfBands.App.Forms.FrmStationsSearch.resources
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands.App\obj\Debug\LineOfBands.App.FrmMain.resources
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands.App\obj\Debug\LineOfBands.App.Properties.Resources.resources
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands.App\obj\Debug\LineOfBands.App.csproj.GenerateResource.cache
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands.App\obj\Debug\LineOfBands.App.csproj.CoreCompileInputs.cache
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands.App\obj\Debug\LineOfBands.App.csproj.CopyComplete
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands.App\obj\Debug\LineOfBands.App.exe
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands.App\obj\Debug\LineOfBands.App.pdb
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands.App\bin\Debug\MetroFramework.Design.dll
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands.App\bin\Debug\MetroFramework.dll
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands.App\bin\Debug\MetroFramework.Fonts.dll

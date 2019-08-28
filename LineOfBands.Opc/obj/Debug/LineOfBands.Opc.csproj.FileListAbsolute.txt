@@ -1,0 +1,24 @@
+C:\Datos\Proyectos\LineOfBands\LineOfBands.Opc\bin\Debug\LineOfBands.Opc.dll
+C:\Datos\Proyectos\LineOfBands\LineOfBands.Opc\bin\Debug\LineOfBands.Opc.pdb
+C:\Datos\Proyectos\LineOfBands\LineOfBands.Opc\obj\Debug\LineOfBands.Opc.csproj.CoreCompileInputs.cache
+C:\Datos\Proyectos\LineOfBands\LineOfBands.Opc\obj\Debug\LineOfBands.Opc.dll
+C:\Datos\Proyectos\LineOfBands\LineOfBands.Opc\obj\Debug\LineOfBands.Opc.pdb
+C:\Datos\Proyectos\LineOfBands\LineOfBands.Opc\obj\Debug\LineOfBands.Opc.csprojAssemblyReference.cache
+C:\Users\Ivan\Desktop\Nueva carpeta\LineOfBands\LineOfBands.Opc\bin\Debug\LineOfBands.Opc.dll
+C:\Users\Ivan\Desktop\Nueva carpeta\LineOfBands\LineOfBands.Opc\bin\Debug\LineOfBands.Opc.pdb
+C:\Users\Ivan\Desktop\Nueva carpeta\LineOfBands\LineOfBands.Opc\obj\Debug\LineOfBands.Opc.csprojAssemblyReference.cache
+C:\Users\Ivan\Desktop\Nueva carpeta\LineOfBands\LineOfBands.Opc\obj\Debug\LineOfBands.Opc.csproj.CoreCompileInputs.cache
+C:\Users\Ivan\Desktop\Nueva carpeta\LineOfBands\LineOfBands.Opc\obj\Debug\LineOfBands.Opc.dll
+C:\Users\Ivan\Desktop\Nueva carpeta\LineOfBands\LineOfBands.Opc\obj\Debug\LineOfBands.Opc.pdb
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBands\LineOfBands.Opc\bin\Debug\LineOfBands.Opc.dll
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBands\LineOfBands.Opc\bin\Debug\LineOfBands.Opc.pdb
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBands\LineOfBands.Opc\obj\Debug\LineOfBands.Opc.csprojAssemblyReference.cache
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBands\LineOfBands.Opc\obj\Debug\LineOfBands.Opc.csproj.CoreCompileInputs.cache
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBands\LineOfBands.Opc\obj\Debug\LineOfBands.Opc.dll
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBands\LineOfBands.Opc\obj\Debug\LineOfBands.Opc.pdb
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands.Opc\bin\Debug\LineOfBands.Opc.dll
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands.Opc\bin\Debug\LineOfBands.Opc.pdb
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands.Opc\obj\Debug\LineOfBands.Opc.csprojAssemblyReference.cache
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands.Opc\obj\Debug\LineOfBands.Opc.csproj.CoreCompileInputs.cache
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands.Opc\obj\Debug\LineOfBands.Opc.dll
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands.Opc\obj\Debug\LineOfBands.Opc.pdb

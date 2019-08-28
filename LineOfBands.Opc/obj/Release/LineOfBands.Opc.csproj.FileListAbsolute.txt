@@ -1,0 +1,14 @@
+C:\Projects\LineOfBands\LineOfBands.Opc\bin\Release\LineOfBands.Opc.dll
+C:\Projects\LineOfBands\LineOfBands.Opc\bin\Release\LineOfBands.Opc.pdb
+C:\Projects\LineOfBands\LineOfBands.Opc\obj\Release\LineOfBands.Opc.dll
+C:\Projects\LineOfBands\LineOfBands.Opc\obj\Release\LineOfBands.Opc.pdb
+C:\Datos\Proyectos\LineOfBands\LineOfBands.Opc\bin\Release\LineOfBands.Opc.dll
+C:\Datos\Proyectos\LineOfBands\LineOfBands.Opc\bin\Release\LineOfBands.Opc.pdb
+C:\Datos\Proyectos\LineOfBands\LineOfBands.Opc\obj\Release\LineOfBands.Opc.dll
+C:\Datos\Proyectos\LineOfBands\LineOfBands.Opc\obj\Release\LineOfBands.Opc.pdb
+C:\Datos\Proyectos\LineOfBandsPC\LineOfBands.Opc\bin\Release\LineOfBands.Opc.dll
+C:\Datos\Proyectos\LineOfBandsPC\LineOfBands.Opc\bin\Release\LineOfBands.Opc.pdb
+C:\Datos\Proyectos\LineOfBandsPC\LineOfBands.Opc\obj\Release\LineOfBands.Opc.dll
+C:\Datos\Proyectos\LineOfBandsPC\LineOfBands.Opc\obj\Release\LineOfBands.Opc.pdb
+C:\Datos\Proyectos\LineOfBandsPC\LineOfBands.Opc\obj\Release\LineOfBands.Opc.csprojResolveAssemblyReference.cache
+C:\Datos\Proyectos\LineOfBands\LineOfBands.Opc\obj\Release\LineOfBands.Opc.csprojResolveAssemblyReference.cache

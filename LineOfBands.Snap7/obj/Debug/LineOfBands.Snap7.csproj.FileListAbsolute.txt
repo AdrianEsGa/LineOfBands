@@ -1,0 +1,30 @@
+C:\Datos\Proyectos\LineOfBands\LineOfBands.Snap7\bin\Debug\LineOfBands.Snap7.dll
+C:\Datos\Proyectos\LineOfBands\LineOfBands.Snap7\bin\Debug\LineOfBands.Snap7.pdb
+C:\Datos\Proyectos\LineOfBands\LineOfBands.Snap7\obj\Debug\LineOfBands.Snap7.csproj.CoreCompileInputs.cache
+C:\Datos\Proyectos\LineOfBands\LineOfBands.Snap7\obj\Debug\LineOfBands.Snap7.dll
+C:\Datos\Proyectos\LineOfBands\LineOfBands.Snap7\obj\Debug\LineOfBands.Snap7.pdb
+C:\Datos\Proyectos\LineOfBands\LineOfBands.Snap7\obj\Debug\LineOfBands.Snap7.csprojAssemblyReference.cache
+C:\Users\Ivan\Desktop\Nueva carpeta\LineOfBands\LineOfBands.Snap7\bin\Debug\LineOfBands.Snap7.dll
+C:\Users\Ivan\Desktop\Nueva carpeta\LineOfBands\LineOfBands.Snap7\bin\Debug\LineOfBands.Snap7.pdb
+C:\Users\Ivan\Desktop\Nueva carpeta\LineOfBands\LineOfBands.Snap7\obj\Debug\LineOfBands.Snap7.csprojAssemblyReference.cache
+C:\Users\Ivan\Desktop\Nueva carpeta\LineOfBands\LineOfBands.Snap7\obj\Debug\LineOfBands.Snap7.csproj.CoreCompileInputs.cache
+C:\Users\Ivan\Desktop\Nueva carpeta\LineOfBands\LineOfBands.Snap7\obj\Debug\LineOfBands.Snap7.dll
+C:\Users\Ivan\Desktop\Nueva carpeta\LineOfBands\LineOfBands.Snap7\obj\Debug\LineOfBands.Snap7.pdb
+D:\Datos\LINEOfBANDS29032019\LineOfBands\LineOfBands.Snap7\bin\Debug\LineOfBands.Snap7.dll
+D:\Datos\LINEOfBANDS29032019\LineOfBands\LineOfBands.Snap7\bin\Debug\LineOfBands.Snap7.pdb
+D:\Datos\LINEOfBANDS29032019\LineOfBands\LineOfBands.Snap7\obj\Debug\LineOfBands.Snap7.csprojAssemblyReference.cache
+D:\Datos\LINEOfBANDS29032019\LineOfBands\LineOfBands.Snap7\obj\Debug\LineOfBands.Snap7.csproj.CoreCompileInputs.cache
+D:\Datos\LINEOfBANDS29032019\LineOfBands\LineOfBands.Snap7\obj\Debug\LineOfBands.Snap7.dll
+D:\Datos\LINEOfBANDS29032019\LineOfBands\LineOfBands.Snap7\obj\Debug\LineOfBands.Snap7.pdb
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBands\LineOfBands.Snap7\bin\Debug\LineOfBands.Snap7.dll
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBands\LineOfBands.Snap7\bin\Debug\LineOfBands.Snap7.pdb
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBands\LineOfBands.Snap7\obj\Debug\LineOfBands.Snap7.csproj.CoreCompileInputs.cache
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBands\LineOfBands.Snap7\obj\Debug\LineOfBands.Snap7.dll
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBands\LineOfBands.Snap7\obj\Debug\LineOfBands.Snap7.pdb
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBands\LineOfBands.Snap7\obj\Debug\LineOfBands.Snap7.csprojAssemblyReference.cache
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands.Snap7\bin\Debug\LineOfBands.Snap7.dll
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands.Snap7\bin\Debug\LineOfBands.Snap7.pdb
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands.Snap7\obj\Debug\LineOfBands.Snap7.csprojAssemblyReference.cache
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands.Snap7\obj\Debug\LineOfBands.Snap7.csproj.CoreCompileInputs.cache
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands.Snap7\obj\Debug\LineOfBands.Snap7.dll
+D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands.Snap7\obj\Debug\LineOfBands.Snap7.pdb

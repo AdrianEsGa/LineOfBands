@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LineOfBands.Database", "LineOfBands.Database\LineOfBands.Database.csproj", "{945D9C35-0399-4F39-9E89-F3044DCFCF64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LineOfBands.Database.Test", "LineOfBands.Database.Test\LineOfBands.Database.Test.csproj", "{FB86F503-8F85-4BC2-A5ED-8A9568A37DE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LineOfBands.Opc", "LineOfBands.Opc\LineOfBands.Opc.csproj", "{6A0B0144-3E09-48EB-93FD-8D8407DE8058}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LineOfBands.Common", "LineOfBands.Common\LineOfBands.Common.csproj", "{D3A6412B-99BF-4769-A12E-4035023DB26D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LineOfBands.App", "LineOfBands.App\LineOfBands.App.csproj", "{0006B475-1986-4622-9376-30C10066BDB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LineOfBands.Snap7", "LineOfBands.Snap7\LineOfBands.Snap7.csproj", "{3B9BB836-15A2-4524-ABA4-8A2757E7205E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{945D9C35-0399-4F39-9E89-F3044DCFCF64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{945D9C35-0399-4F39-9E89-F3044DCFCF64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{945D9C35-0399-4F39-9E89-F3044DCFCF64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{945D9C35-0399-4F39-9E89-F3044DCFCF64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB86F503-8F85-4BC2-A5ED-8A9568A37DE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB86F503-8F85-4BC2-A5ED-8A9568A37DE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB86F503-8F85-4BC2-A5ED-8A9568A37DE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB86F503-8F85-4BC2-A5ED-8A9568A37DE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A0B0144-3E09-48EB-93FD-8D8407DE8058}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A0B0144-3E09-48EB-93FD-8D8407DE8058}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A0B0144-3E09-48EB-93FD-8D8407DE8058}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A0B0144-3E09-48EB-93FD-8D8407DE8058}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3A6412B-99BF-4769-A12E-4035023DB26D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3A6412B-99BF-4769-A12E-4035023DB26D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3A6412B-99BF-4769-A12E-4035023DB26D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3A6412B-99BF-4769-A12E-4035023DB26D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0006B475-1986-4622-9376-30C10066BDB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0006B475-1986-4622-9376-30C10066BDB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0006B475-1986-4622-9376-30C10066BDB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0006B475-1986-4622-9376-30C10066BDB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B9BB836-15A2-4524-ABA4-8A2757E7205E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B9BB836-15A2-4524-ABA4-8A2757E7205E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B9BB836-15A2-4524-ABA4-8A2757E7205E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B9BB836-15A2-4524-ABA4-8A2757E7205E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
