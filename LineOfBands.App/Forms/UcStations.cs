@@ -144,6 +144,5 @@ namespace LineOfBands.App.Forms
 
         #endregion
 
-
     }
 }

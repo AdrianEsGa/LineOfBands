@@ -5,6 +5,5 @@ C:\Datos\Proyectos\LineOfBandsPC\LineOfBands.Snap7\obj\Release\LineOfBands.Snap7
 C:\Datos\Proyectos\LineOfBandsPC\LineOfBands.Snap7\obj\Release\LineOfBands.Snap7.csprojResolveAssemblyReference.cache
 C:\Datos\Proyectos\LineOfBands\LineOfBands.Snap7\bin\Release\LineOfBands.Snap7.dll
 C:\Datos\Proyectos\LineOfBands\LineOfBands.Snap7\bin\Release\LineOfBands.Snap7.pdb
-C:\Datos\Proyectos\LineOfBands\LineOfBands.Snap7\obj\Release\LineOfBands.Snap7.csprojResolveAssemblyReference.cache
 C:\Datos\Proyectos\LineOfBands\LineOfBands.Snap7\obj\Release\LineOfBands.Snap7.dll
 C:\Datos\Proyectos\LineOfBands\LineOfBands.Snap7\obj\Release\LineOfBands.Snap7.pdb
