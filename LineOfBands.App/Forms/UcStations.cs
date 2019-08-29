@@ -29,6 +29,8 @@ namespace LineOfBands.App.Forms
             }
         }
 
+        #region Events
+
         private void BtnBack_Click(object sender, EventArgs e)
         {
             ViewController.Show(View.UcMenu);
@@ -37,6 +39,21 @@ namespace LineOfBands.App.Forms
         private void btnSearch_Click(object sender, EventArgs e)
         {
             Search();
+        }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            New();
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            Remove();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            Save();
         }
 
         private void DataGridSearch_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -50,6 +67,10 @@ namespace LineOfBands.App.Forms
 
             tabControlContent.SelectedTab = tabData;
         }
+
+        #endregion
+
+        #region Private Methods
 
         private void Initialize()
         {
@@ -65,7 +86,47 @@ namespace LineOfBands.App.Forms
             }
             catch (Exception ex)
             {
-                MetroMessageBox.Show(this, ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               ViewController.ShowError(ex.Message);
+            }
+        }
+
+        private void New()
+        {
+            try
+            {
+                _selectedStation = new Station();
+                BindingDataToControls();
+            }
+            catch (Exception ex)
+            {
+                ViewController.ShowError(ex.Message);
+            }
+        }
+
+        private void Remove()
+        {
+            try
+            {
+                if(_selectedStation.Id == 0) return;
+                StationController.Remove(_selectedStation);
+            }
+            catch (Exception ex)
+            {
+                ViewController.ShowError(ex.Message);
+            }
+        }
+
+        private void Save()
+        {
+            try
+            {
+                BindingControlsToData();
+               _selectedStation = StationController.SaveOrUpdate(_selectedStation);
+                BindingDataToControls();
+            }
+            catch (Exception ex)
+            {
+                ViewController.ShowError(ex.Message);
             }
         }
 
@@ -77,7 +138,12 @@ namespace LineOfBands.App.Forms
 
         private void BindingControlsToData()
         {
-            
+            _selectedStation.Code = int.Parse(txtCode.Text);
+            _selectedStation.Name = txtName.Text;
         }
+
+        #endregion
+
+
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System.Windows.Forms;
 using LineOfBands.App.Forms;
+using MetroFramework;
 using MetroFramework.Controls;
 
 namespace LineOfBands.App
@@ -30,6 +31,11 @@ namespace LineOfBands.App
             }
      
             FrmMain.Instance.Container.Controls[viewType.ToString()].BringToFront();
+        }
+
+        public static void ShowError(string message)
+        {
+            MetroMessageBox.Show(FrmMain.Instance, message, "Ha ocurrido un error! Nooooo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 

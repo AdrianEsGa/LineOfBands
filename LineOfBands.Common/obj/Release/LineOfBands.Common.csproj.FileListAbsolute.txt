@@ -2,13 +2,12 @@ C:\Projects\LineOfBands\LineOfBands.Common\bin\Release\LineOfBands.Common.dll
 C:\Projects\LineOfBands\LineOfBands.Common\bin\Release\LineOfBands.Common.pdb
 C:\Projects\LineOfBands\LineOfBands.Common\obj\Release\LineOfBands.Common.dll
 C:\Projects\LineOfBands\LineOfBands.Common\obj\Release\LineOfBands.Common.pdb
-C:\Datos\Proyectos\LineOfBands\LineOfBands.Common\bin\Release\LineOfBands.Common.dll
-C:\Datos\Proyectos\LineOfBands\LineOfBands.Common\bin\Release\LineOfBands.Common.pdb
-C:\Datos\Proyectos\LineOfBands\LineOfBands.Common\obj\Release\LineOfBands.Common.dll
-C:\Datos\Proyectos\LineOfBands\LineOfBands.Common\obj\Release\LineOfBands.Common.pdb
 C:\Datos\Proyectos\LineOfBandsPC\LineOfBands.Common\bin\Release\LineOfBands.Common.dll
 C:\Datos\Proyectos\LineOfBandsPC\LineOfBands.Common\bin\Release\LineOfBands.Common.pdb
 C:\Datos\Proyectos\LineOfBandsPC\LineOfBands.Common\obj\Release\LineOfBands.Common.dll
 C:\Datos\Proyectos\LineOfBandsPC\LineOfBands.Common\obj\Release\LineOfBands.Common.pdb
 C:\Datos\Proyectos\LineOfBandsPC\LineOfBands.Common\obj\Release\LineOfBands.Common.csprojResolveAssemblyReference.cache
-C:\Datos\Proyectos\LineOfBands\LineOfBands.Common\obj\Release\LineOfBands.Common.csprojResolveAssemblyReference.cache
+C:\Datos\Proyectos\LineOfBands\LineOfBands.Common\bin\Release\LineOfBands.Common.dll
+C:\Datos\Proyectos\LineOfBands\LineOfBands.Common\bin\Release\LineOfBands.Common.pdb
+C:\Datos\Proyectos\LineOfBands\LineOfBands.Common\obj\Release\LineOfBands.Common.dll
+C:\Datos\Proyectos\LineOfBands\LineOfBands.Common\obj\Release\LineOfBands.Common.pdb

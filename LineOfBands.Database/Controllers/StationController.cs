@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Reflection;
-using LineOfBands.Common;
 using LineOfBands.Database.Entities;
 using LineOfBands.Database.Repositories;
 
@@ -15,16 +12,18 @@ namespace LineOfBands.Database.Controllers
         {
             try
             {
-                if (station.Code == 0) new Exception("El código de estación no puede ser 0");
+                if (station.Code == 0)
+                {
+                    var exception = new Exception("El código de estación no puede ser 0");
+                }
 
-                StationRepository.SaveOrUpdate(station);
+                return StationRepository.SaveOrUpdate(station);
             }
             catch (Exception ex)
             {
-               
+                // ReSharper disable once PossibleIntendedRethrow
+                throw ex;
             }
-
-            return station;
         }
 
         public static Station GetByCode(int code)
@@ -50,17 +49,22 @@ namespace LineOfBands.Database.Controllers
             }
             catch (Exception ex)
             {
+                // ReSharper disable once PossibleIntendedRethrow
                 throw ex;
-            }
-           
+            }        
         }
-
-       
-
+     
         public static void Remove(Station station)
         {
-            
+            try
+            {
+                 StationRepository.Remove(station);
+            }
+            catch (Exception ex)
+            {
+                // ReSharper disable once PossibleIntendedRethrow
+                throw ex;
+            }    
         }
-
     }
 }

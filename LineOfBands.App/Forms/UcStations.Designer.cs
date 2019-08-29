@@ -37,7 +37,7 @@
             this.cmbType = new MetroFramework.Controls.MetroComboBox();
             this.txtName = new MetroFramework.Controls.MetroTextBox();
             this.btnNew = new MetroFramework.Controls.MetroTile();
-            this.btnDelete = new MetroFramework.Controls.MetroTile();
+            this.btnRemove = new MetroFramework.Controls.MetroTile();
             this.btnSave = new MetroFramework.Controls.MetroTile();
             this.btnSearch = new MetroFramework.Controls.MetroTile();
             this.BtnBack = new MetroFramework.Controls.MetroLink();
@@ -46,8 +46,8 @@
             this.lblType = new MetroFramework.Controls.MetroLabel();
             this.pnHead = new MetroFramework.Controls.MetroPanel();
             this.pnFooter = new MetroFramework.Controls.MetroPanel();
-            this.pnContent = new MetroFramework.Controls.MetroPanel();
             this.pnRightFooter = new MetroFramework.Controls.MetroPanel();
+            this.pnContent = new MetroFramework.Controls.MetroPanel();
             this.tabControlContent = new MetroFramework.Controls.MetroTabControl();
             this.tabData = new MetroFramework.Controls.MetroTabPage();
             this.tabSearch = new MetroFramework.Controls.MetroTabPage();
@@ -70,8 +70,8 @@
             this.stationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnHead.SuspendLayout();
             this.pnFooter.SuspendLayout();
-            this.pnContent.SuspendLayout();
             this.pnRightFooter.SuspendLayout();
+            this.pnContent.SuspendLayout();
             this.tabControlContent.SuspendLayout();
             this.tabData.SuspendLayout();
             this.tabSearch.SuspendLayout();
@@ -163,18 +163,20 @@
             this.btnNew.TileTextFontSize = MetroFramework.MetroTileTextSize.Small;
             this.btnNew.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.btnNew.UseSelectable = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
-            // btnDelete
+            // btnRemove
             // 
-            this.btnDelete.ActiveControl = null;
-            this.btnDelete.Location = new System.Drawing.Point(154, 9);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(131, 37);
-            this.btnDelete.TabIndex = 10;
-            this.btnDelete.Text = "Eliminar";
-            this.btnDelete.TileTextFontSize = MetroFramework.MetroTileTextSize.Small;
-            this.btnDelete.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-            this.btnDelete.UseSelectable = true;
+            this.btnRemove.ActiveControl = null;
+            this.btnRemove.Location = new System.Drawing.Point(154, 9);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(131, 37);
+            this.btnRemove.TabIndex = 10;
+            this.btnRemove.Text = "Eliminar";
+            this.btnRemove.TileTextFontSize = MetroFramework.MetroTileTextSize.Small;
+            this.btnRemove.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.btnRemove.UseSelectable = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // btnSave
             // 
@@ -187,6 +189,7 @@
             this.btnSave.TileTextFontSize = MetroFramework.MetroTileTextSize.Small;
             this.btnSave.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.btnSave.UseSelectable = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnSearch
             // 
@@ -271,6 +274,23 @@
             this.pnFooter.VerticalScrollbarHighlightOnWheel = false;
             this.pnFooter.VerticalScrollbarSize = 10;
             // 
+            // pnRightFooter
+            // 
+            this.pnRightFooter.Controls.Add(this.btnRemove);
+            this.pnRightFooter.Controls.Add(this.btnNew);
+            this.pnRightFooter.Controls.Add(this.btnSave);
+            this.pnRightFooter.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnRightFooter.HorizontalScrollbarBarColor = true;
+            this.pnRightFooter.HorizontalScrollbarHighlightOnWheel = false;
+            this.pnRightFooter.HorizontalScrollbarSize = 10;
+            this.pnRightFooter.Location = new System.Drawing.Point(336, 0);
+            this.pnRightFooter.Name = "pnRightFooter";
+            this.pnRightFooter.Size = new System.Drawing.Size(440, 59);
+            this.pnRightFooter.TabIndex = 13;
+            this.pnRightFooter.VerticalScrollbarBarColor = true;
+            this.pnRightFooter.VerticalScrollbarHighlightOnWheel = false;
+            this.pnRightFooter.VerticalScrollbarSize = 10;
+            // 
             // pnContent
             // 
             this.pnContent.Controls.Add(this.tabControlContent);
@@ -286,23 +306,6 @@
             this.pnContent.VerticalScrollbarHighlightOnWheel = false;
             this.pnContent.VerticalScrollbarSize = 10;
             // 
-            // pnRightFooter
-            // 
-            this.pnRightFooter.Controls.Add(this.btnDelete);
-            this.pnRightFooter.Controls.Add(this.btnNew);
-            this.pnRightFooter.Controls.Add(this.btnSave);
-            this.pnRightFooter.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnRightFooter.HorizontalScrollbarBarColor = true;
-            this.pnRightFooter.HorizontalScrollbarHighlightOnWheel = false;
-            this.pnRightFooter.HorizontalScrollbarSize = 10;
-            this.pnRightFooter.Location = new System.Drawing.Point(336, 0);
-            this.pnRightFooter.Name = "pnRightFooter";
-            this.pnRightFooter.Size = new System.Drawing.Size(440, 59);
-            this.pnRightFooter.TabIndex = 13;
-            this.pnRightFooter.VerticalScrollbarBarColor = true;
-            this.pnRightFooter.VerticalScrollbarHighlightOnWheel = false;
-            this.pnRightFooter.VerticalScrollbarSize = 10;
-            // 
             // tabControlContent
             // 
             this.tabControlContent.Controls.Add(this.tabData);
@@ -310,7 +313,7 @@
             this.tabControlContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlContent.Location = new System.Drawing.Point(0, 0);
             this.tabControlContent.Name = "tabControlContent";
-            this.tabControlContent.SelectedIndex = 1;
+            this.tabControlContent.SelectedIndex = 0;
             this.tabControlContent.Size = new System.Drawing.Size(776, 357);
             this.tabControlContent.TabIndex = 17;
             this.tabControlContent.UseSelectable = true;
@@ -534,8 +537,8 @@
             this.Load += new System.EventHandler(this.FrmStations_Load);
             this.pnHead.ResumeLayout(false);
             this.pnFooter.ResumeLayout(false);
-            this.pnContent.ResumeLayout(false);
             this.pnRightFooter.ResumeLayout(false);
+            this.pnContent.ResumeLayout(false);
             this.tabControlContent.ResumeLayout(false);
             this.tabData.ResumeLayout(false);
             this.tabData.PerformLayout();
@@ -552,7 +555,7 @@
         private MetroFramework.Controls.MetroComboBox cmbType;
         private MetroFramework.Controls.MetroTextBox txtName;
         private MetroFramework.Controls.MetroTile btnNew;
-        private MetroFramework.Controls.MetroTile btnDelete;
+        private MetroFramework.Controls.MetroTile btnRemove;
         private MetroFramework.Controls.MetroTile btnSave;
         private MetroFramework.Controls.MetroTile btnSearch;
         private MetroFramework.Controls.MetroLink BtnBack;

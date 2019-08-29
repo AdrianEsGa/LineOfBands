@@ -189,8 +189,8 @@ namespace LineOfBands.Database.Repositories
             }
             catch (Exception ex)
             {
-                Logger.Insert(LoggerType.Error, Assembly.GetExecutingAssembly().GetName().Name,
-                    "StationRepository.Remove()", ex.Message);
+                // ReSharper disable once PossibleIntendedRethrow
+                throw ex;
             }
         }
     }
