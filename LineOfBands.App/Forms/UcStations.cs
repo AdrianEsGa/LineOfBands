@@ -25,7 +25,7 @@ namespace LineOfBands.App.Forms
             }
             catch(Exception ex)
             {
-                MetroMessageBox.Show(this, ex.Message, "PEtada", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               ViewController.ShowError(ex.Message);
             }
         }
 
@@ -134,12 +134,14 @@ namespace LineOfBands.App.Forms
         {
             txtCode.Text = _selectedStation.Code.ToString();
             txtName.Text = _selectedStation.Name;
+            cmbType.SelectedItem = _selectedStation.Type;
         }
 
         private void BindingControlsToData()
         {
             _selectedStation.Code = int.Parse(txtCode.Text);
             _selectedStation.Name = txtName.Text;
+            _selectedStation.Type = (StationType) cmbType.SelectedItem;
         }
 
         #endregion

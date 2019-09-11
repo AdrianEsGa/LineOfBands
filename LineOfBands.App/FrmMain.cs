@@ -13,7 +13,6 @@ namespace LineOfBands.App
 {
     public partial class FrmMain : MetroFramework.Forms.MetroForm
     {
-
         private static FrmMain _instance;
 
         public static FrmMain Instance
@@ -125,6 +124,7 @@ namespace LineOfBands.App
         #region 3.1 OPC - Protocolo de cumunicación
 
         #region Initialize
+
         private void InitializeOpc()
         {
             InitializeOpc_Initilize();

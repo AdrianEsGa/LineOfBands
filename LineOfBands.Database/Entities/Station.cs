@@ -9,7 +9,6 @@ namespace LineOfBands.Database.Entities
     {
         public int Id { get; set; }
         public int Code { get; set; }
-        public Line Line { get; set; }
         public string Name { get; set; }
         public StationType Type { get; set; }
         public string StatusDataChangeAddress { get; set; }

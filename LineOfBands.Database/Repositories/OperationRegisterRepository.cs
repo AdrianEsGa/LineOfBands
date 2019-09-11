@@ -1,6 +1,7 @@
 ﻿using LineOfBands.Common;
 using LineOfBands.Database.Entities;
 using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Reflection;
 
@@ -113,9 +114,96 @@ namespace LineOfBands.Database.Repositories
 
             return operationRegister;
 
-
         }
-       
 
+        public static List<OperationRegister> GetActiveOperations()
+        {
+            var operationRegisters = new List<OperationRegister>();
+
+            try
+            {
+                using (var connection = SqlServer.OpenConnection())
+                {
+                    const string strSql = "SELECT Id, OperationInId, PalletId, MoldId, PartId, InitDateTime FROM OperationRegisters WHERE EndDateTime IS NULL";
+
+                    using (var command = new SqlCommand(strSql, connection))
+                    {
+                        using (var reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                var operationRegister = new OperationRegister
+                                {
+                                    Id = int.Parse(reader["Id"].ToString()),
+                                    OperationIn =
+                                        OperationRepository.GetById(int.Parse(reader["OperationInId"].ToString())),
+                                    Mold = MoldRepository.GetById(int.Parse(reader["MoldId"].ToString())),
+                                    Pallet = PalletRepository.GetById(int.Parse(reader["PalletId"].ToString()))
+                                };
+
+                                if (reader["PartId"] != DBNull.Value)
+                                    operationRegister.Part = PartRepository.GetById(int.Parse(reader["PartId"].ToString()));
+
+                                operationRegister.InitDateTime = (DateTime)reader["InitDateTime"];
+
+                                operationRegisters.Add(operationRegister);
+                            }
+                        }
+                    }
+                }
+
+                return operationRegisters;
+            }
+            catch (Exception ex)
+            {
+                // ReSharper disable once PossibleIntendedRethrow
+                throw ex;
+            }      
+        }
+
+        public static List<OperationRegister> GetLastOperations()
+        {
+            var operationRegisters = new List<OperationRegister>();
+
+            try
+            {
+                using (var connection = SqlServer.OpenConnection())
+                {
+                    const string strSql = "SELECT TOP 10 Id, OperationInId, PalletId, MoldId, PartId, InitDateTime FROM OperationRegisters WHERE EndDateTime IS NOT NULL  ORDER BY EndDateTime DESC";
+
+                    using (var command = new SqlCommand(strSql, connection))
+                    {
+                        using (var reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                var operationRegister = new OperationRegister
+                                {
+                                    Id = int.Parse(reader["Id"].ToString()),
+                                    OperationIn =
+                                        OperationRepository.GetById(int.Parse(reader["OperationInId"].ToString())),
+                                    Mold = MoldRepository.GetById(int.Parse(reader["MoldId"].ToString())),
+                                    Pallet = PalletRepository.GetById(int.Parse(reader["PalletId"].ToString()))
+                                };
+
+                                if (reader["PartId"] != DBNull.Value)
+                                    operationRegister.Part = PartRepository.GetById(int.Parse(reader["PartId"].ToString()));
+
+                                operationRegister.InitDateTime = (DateTime)reader["InitDateTime"];
+
+                                operationRegisters.Add(operationRegister);
+                            }
+                        }
+                    }
+                }
+
+                return operationRegisters;
+            }
+            catch (Exception ex)
+            {
+                // ReSharper disable once PossibleIntendedRethrow
+                throw ex;
+            }
+        }
     }
 }

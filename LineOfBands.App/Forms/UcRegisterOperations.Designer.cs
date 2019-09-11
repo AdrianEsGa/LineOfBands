@@ -30,32 +30,24 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UcRegisterOperations));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.HeadPanel = new MetroFramework.Controls.MetroPanel();
             this.BtnMenu = new MetroFramework.Controls.MetroLink();
             this.ContentPanel = new MetroFramework.Controls.MetroPanel();
             this.LastOpertationsPanel = new MetroFramework.Controls.MetroPanel();
+            this.DataGridLastOperations = new MetroFramework.Controls.MetroGrid();
             this.LastOpertationsDescPanel = new MetroFramework.Controls.MetroPanel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.ActiveOperationsPanel = new MetroFramework.Controls.MetroPanel();
             this.DataGridActiveOperations = new MetroFramework.Controls.MetroGrid();
-            this.operationRegisterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ActiveOpertationsDescPanel = new MetroFramework.Controls.MetroPanel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.operationInDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.operationOutDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.palletDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.moldDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.partDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.initDateTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.endDateTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataGridLastOperations = new MetroFramework.Controls.MetroGrid();
+            this.RefreshTimer = new System.Windows.Forms.Timer(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,16 +56,24 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RefreshTimer = new System.Windows.Forms.Timer(this.components);
+            this.operationRegisterBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.operationInDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.operationOutDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.palletDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.moldDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.partDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.initDateTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.endDateTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HeadPanel.SuspendLayout();
             this.ContentPanel.SuspendLayout();
             this.LastOpertationsPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridLastOperations)).BeginInit();
             this.LastOpertationsDescPanel.SuspendLayout();
             this.ActiveOperationsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridActiveOperations)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.operationRegisterBindingSource)).BeginInit();
             this.ActiveOpertationsDescPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridLastOperations)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.operationRegisterBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // HeadPanel
@@ -135,6 +135,63 @@
             this.LastOpertationsPanel.VerticalScrollbarHighlightOnWheel = false;
             this.LastOpertationsPanel.VerticalScrollbarSize = 10;
             // 
+            // DataGridLastOperations
+            // 
+            this.DataGridLastOperations.AllowUserToResizeRows = false;
+            this.DataGridLastOperations.AutoGenerateColumns = false;
+            this.DataGridLastOperations.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.DataGridLastOperations.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DataGridLastOperations.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.DataGridLastOperations.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridLastOperations.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.DataGridLastOperations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridLastOperations.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8});
+            this.DataGridLastOperations.DataSource = this.operationRegisterBindingSource;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGridLastOperations.DefaultCellStyle = dataGridViewCellStyle2;
+            this.DataGridLastOperations.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DataGridLastOperations.EnableHeadersVisualStyles = false;
+            this.DataGridLastOperations.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.DataGridLastOperations.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.DataGridLastOperations.Location = new System.Drawing.Point(0, 0);
+            this.DataGridLastOperations.MultiSelect = false;
+            this.DataGridLastOperations.Name = "DataGridLastOperations";
+            this.DataGridLastOperations.ReadOnly = true;
+            this.DataGridLastOperations.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridLastOperations.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.DataGridLastOperations.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.DataGridLastOperations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DataGridLastOperations.Size = new System.Drawing.Size(895, 265);
+            this.DataGridLastOperations.TabIndex = 3;
+            // 
             // LastOpertationsDescPanel
             // 
             this.LastOpertationsDescPanel.Controls.Add(this.metroLabel2);
@@ -155,9 +212,9 @@
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.Location = new System.Drawing.Point(3, 3);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(83, 19);
+            this.metroLabel2.Size = new System.Drawing.Size(154, 19);
             this.metroLabel2.TabIndex = 2;
-            this.metroLabel2.Text = "metroLabel2";
+            this.metroLabel2.Text = "Histórico de operaciones";
             // 
             // ActiveOperationsPanel
             // 
@@ -214,7 +271,9 @@
             this.DataGridActiveOperations.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.DataGridActiveOperations.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.DataGridActiveOperations.Location = new System.Drawing.Point(0, 0);
+            this.DataGridActiveOperations.MultiSelect = false;
             this.DataGridActiveOperations.Name = "DataGridActiveOperations";
+            this.DataGridActiveOperations.ReadOnly = true;
             this.DataGridActiveOperations.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
@@ -228,10 +287,6 @@
             this.DataGridActiveOperations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGridActiveOperations.Size = new System.Drawing.Size(895, 306);
             this.DataGridActiveOperations.TabIndex = 2;
-            // 
-            // operationRegisterBindingSource
-            // 
-            this.operationRegisterBindingSource.DataSource = typeof(LineOfBands.Database.Entities.OperationRegister);
             // 
             // ActiveOpertationsDescPanel
             // 
@@ -253,126 +308,21 @@
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.Location = new System.Drawing.Point(3, 4);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(81, 19);
+            this.metroLabel1.Size = new System.Drawing.Size(133, 19);
             this.metroLabel1.TabIndex = 2;
-            this.metroLabel1.Text = "metroLabel1";
+            this.metroLabel1.Text = "Operaciones actuales";
             // 
-            // idDataGridViewTextBoxColumn
+            // RefreshTimer
             // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // operationInDataGridViewTextBoxColumn
-            // 
-            this.operationInDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.operationInDataGridViewTextBoxColumn.DataPropertyName = "OperationIn";
-            this.operationInDataGridViewTextBoxColumn.HeaderText = "Operacion Entrada";
-            this.operationInDataGridViewTextBoxColumn.Name = "operationInDataGridViewTextBoxColumn";
-            // 
-            // operationOutDataGridViewTextBoxColumn
-            // 
-            this.operationOutDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.operationOutDataGridViewTextBoxColumn.DataPropertyName = "OperationOut";
-            this.operationOutDataGridViewTextBoxColumn.HeaderText = "Operacion Salida";
-            this.operationOutDataGridViewTextBoxColumn.Name = "operationOutDataGridViewTextBoxColumn";
-            // 
-            // palletDataGridViewTextBoxColumn
-            // 
-            this.palletDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.palletDataGridViewTextBoxColumn.DataPropertyName = "Pallet";
-            this.palletDataGridViewTextBoxColumn.HeaderText = "Pallet";
-            this.palletDataGridViewTextBoxColumn.Name = "palletDataGridViewTextBoxColumn";
-            // 
-            // moldDataGridViewTextBoxColumn
-            // 
-            this.moldDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.moldDataGridViewTextBoxColumn.DataPropertyName = "Mold";
-            this.moldDataGridViewTextBoxColumn.HeaderText = "Molde";
-            this.moldDataGridViewTextBoxColumn.Name = "moldDataGridViewTextBoxColumn";
-            // 
-            // partDataGridViewTextBoxColumn
-            // 
-            this.partDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.partDataGridViewTextBoxColumn.DataPropertyName = "Part";
-            this.partDataGridViewTextBoxColumn.HeaderText = "Pieza";
-            this.partDataGridViewTextBoxColumn.Name = "partDataGridViewTextBoxColumn";
-            // 
-            // initDateTimeDataGridViewTextBoxColumn
-            // 
-            this.initDateTimeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.initDateTimeDataGridViewTextBoxColumn.DataPropertyName = "InitDateTime";
-            this.initDateTimeDataGridViewTextBoxColumn.HeaderText = "Fecha/Hora Inicio";
-            this.initDateTimeDataGridViewTextBoxColumn.Name = "initDateTimeDataGridViewTextBoxColumn";
-            // 
-            // endDateTimeDataGridViewTextBoxColumn
-            // 
-            this.endDateTimeDataGridViewTextBoxColumn.DataPropertyName = "EndDateTime";
-            this.endDateTimeDataGridViewTextBoxColumn.HeaderText = "EndDateTime";
-            this.endDateTimeDataGridViewTextBoxColumn.Name = "endDateTimeDataGridViewTextBoxColumn";
-            this.endDateTimeDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // DataGridLastOperations
-            // 
-            this.DataGridLastOperations.AllowUserToResizeRows = false;
-            this.DataGridLastOperations.AutoGenerateColumns = false;
-            this.DataGridLastOperations.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.DataGridLastOperations.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DataGridLastOperations.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.DataGridLastOperations.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridLastOperations.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.DataGridLastOperations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridLastOperations.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8});
-            this.DataGridLastOperations.DataSource = this.operationRegisterBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGridLastOperations.DefaultCellStyle = dataGridViewCellStyle2;
-            this.DataGridLastOperations.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DataGridLastOperations.EnableHeadersVisualStyles = false;
-            this.DataGridLastOperations.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.DataGridLastOperations.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.DataGridLastOperations.Location = new System.Drawing.Point(0, 0);
-            this.DataGridLastOperations.Name = "DataGridLastOperations";
-            this.DataGridLastOperations.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridLastOperations.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.DataGridLastOperations.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.DataGridLastOperations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGridLastOperations.Size = new System.Drawing.Size(895, 265);
-            this.DataGridLastOperations.TabIndex = 3;
+            this.RefreshTimer.Interval = 1000;
+            this.RefreshTimer.Tick += new System.EventHandler(this.RefreshTimer_Tick);
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
             this.dataGridViewTextBoxColumn1.HeaderText = "Id";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             this.dataGridViewTextBoxColumn1.Visible = false;
             // 
             // dataGridViewTextBoxColumn2
@@ -381,6 +331,7 @@
             this.dataGridViewTextBoxColumn2.DataPropertyName = "OperationIn";
             this.dataGridViewTextBoxColumn2.HeaderText = "Operacion Entrada";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -388,6 +339,7 @@
             this.dataGridViewTextBoxColumn3.DataPropertyName = "OperationOut";
             this.dataGridViewTextBoxColumn3.HeaderText = "Operacion Salida";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -395,6 +347,7 @@
             this.dataGridViewTextBoxColumn4.DataPropertyName = "Pallet";
             this.dataGridViewTextBoxColumn4.HeaderText = "Pallet";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn5
             // 
@@ -402,6 +355,7 @@
             this.dataGridViewTextBoxColumn5.DataPropertyName = "Mold";
             this.dataGridViewTextBoxColumn5.HeaderText = "Molde";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn6
             // 
@@ -409,6 +363,7 @@
             this.dataGridViewTextBoxColumn6.DataPropertyName = "Part";
             this.dataGridViewTextBoxColumn6.HeaderText = "Pieza";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn7
             // 
@@ -416,17 +371,82 @@
             this.dataGridViewTextBoxColumn7.DataPropertyName = "InitDateTime";
             this.dataGridViewTextBoxColumn7.HeaderText = "Fecha/Hora Inicio";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.DataPropertyName = "EndDateTime";
             this.dataGridViewTextBoxColumn8.HeaderText = "Fecha/Hora Fin";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
             // 
-            // RefreshTimer
+            // operationRegisterBindingSource
             // 
-            this.RefreshTimer.Interval = 1000;
-            this.RefreshTimer.Tick += new System.EventHandler(this.RefreshTimer_Tick);
+            this.operationRegisterBindingSource.DataSource = typeof(LineOfBands.Database.Entities.OperationRegister);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // operationInDataGridViewTextBoxColumn
+            // 
+            this.operationInDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.operationInDataGridViewTextBoxColumn.DataPropertyName = "OperationIn";
+            this.operationInDataGridViewTextBoxColumn.HeaderText = "Operacion Entrada";
+            this.operationInDataGridViewTextBoxColumn.Name = "operationInDataGridViewTextBoxColumn";
+            this.operationInDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // operationOutDataGridViewTextBoxColumn
+            // 
+            this.operationOutDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.operationOutDataGridViewTextBoxColumn.DataPropertyName = "OperationOut";
+            this.operationOutDataGridViewTextBoxColumn.HeaderText = "Operacion Salida";
+            this.operationOutDataGridViewTextBoxColumn.Name = "operationOutDataGridViewTextBoxColumn";
+            this.operationOutDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // palletDataGridViewTextBoxColumn
+            // 
+            this.palletDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.palletDataGridViewTextBoxColumn.DataPropertyName = "Pallet";
+            this.palletDataGridViewTextBoxColumn.HeaderText = "Pallet";
+            this.palletDataGridViewTextBoxColumn.Name = "palletDataGridViewTextBoxColumn";
+            this.palletDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // moldDataGridViewTextBoxColumn
+            // 
+            this.moldDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.moldDataGridViewTextBoxColumn.DataPropertyName = "Mold";
+            this.moldDataGridViewTextBoxColumn.HeaderText = "Molde";
+            this.moldDataGridViewTextBoxColumn.Name = "moldDataGridViewTextBoxColumn";
+            this.moldDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // partDataGridViewTextBoxColumn
+            // 
+            this.partDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.partDataGridViewTextBoxColumn.DataPropertyName = "Part";
+            this.partDataGridViewTextBoxColumn.HeaderText = "Pieza";
+            this.partDataGridViewTextBoxColumn.Name = "partDataGridViewTextBoxColumn";
+            this.partDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // initDateTimeDataGridViewTextBoxColumn
+            // 
+            this.initDateTimeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.initDateTimeDataGridViewTextBoxColumn.DataPropertyName = "InitDateTime";
+            this.initDateTimeDataGridViewTextBoxColumn.HeaderText = "Fecha/Hora Inicio";
+            this.initDateTimeDataGridViewTextBoxColumn.Name = "initDateTimeDataGridViewTextBoxColumn";
+            this.initDateTimeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // endDateTimeDataGridViewTextBoxColumn
+            // 
+            this.endDateTimeDataGridViewTextBoxColumn.DataPropertyName = "EndDateTime";
+            this.endDateTimeDataGridViewTextBoxColumn.HeaderText = "EndDateTime";
+            this.endDateTimeDataGridViewTextBoxColumn.Name = "endDateTimeDataGridViewTextBoxColumn";
+            this.endDateTimeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.endDateTimeDataGridViewTextBoxColumn.Visible = false;
             // 
             // UcRegisterOperations
             // 
@@ -440,14 +460,14 @@
             this.HeadPanel.ResumeLayout(false);
             this.ContentPanel.ResumeLayout(false);
             this.LastOpertationsPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridLastOperations)).EndInit();
             this.LastOpertationsDescPanel.ResumeLayout(false);
             this.LastOpertationsDescPanel.PerformLayout();
             this.ActiveOperationsPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridActiveOperations)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.operationRegisterBindingSource)).EndInit();
             this.ActiveOpertationsDescPanel.ResumeLayout(false);
             this.ActiveOpertationsDescPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridLastOperations)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.operationRegisterBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Data.SqlClient;
-using System.Reflection;
 using LineOfBands.Common;
 using LineOfBands.Database.Entities;
 
@@ -24,13 +23,6 @@ namespace LineOfBands.Database.Repositories
 
                         using (var reader = command.ExecuteReader())
                         {
-                            if (!reader.HasRows)
-                            {
-                                Logger.Insert(LoggerType.Warning, Assembly.GetExecutingAssembly().GetName().Name,
-                                    "StationRepository.GetByCode()", "Station (" + code + ") not found!");
-                                return operation;
-                            }
-
                             while (reader.Read())
                             {
                                 operation.Id = Convert.ToInt32(reader["Id"]);
@@ -39,8 +31,7 @@ namespace LineOfBands.Database.Repositories
                                 operation.InitPart = (bool) reader["InitPart"];
                                 operation.LoadMold = (bool)reader["LoadMold"];
                                 operation.Station = StationRepository.GetById(Convert.ToInt16(reader["StationId"]));
-                                operation.StationTypeOperation = new StationTypeOperation();
-
+                                operation.StationTypeOperation = StationTypeOperationRepository.GetById(Convert.ToInt16(reader["StationTypeOperationId"]));
                             }
                         }
                     }
@@ -48,8 +39,8 @@ namespace LineOfBands.Database.Repositories
             }
             catch (Exception ex)
             {
-                Logger.Insert(LoggerType.Error, Assembly.GetExecutingAssembly().GetName().Name,
-                    "OperationRepository.GetByCode()", ex.Message);
+                // ReSharper disable once PossibleIntendedRethrow
+                throw ex;
             }
 
             return operation;
@@ -77,13 +68,14 @@ namespace LineOfBands.Database.Repositories
                             operation.InitPart = (bool)reader["InitPart"];
                             operation.LoadMold = (bool)reader["LoadMold"];
                             operation.Station = StationRepository.GetById(Convert.ToInt16(reader["StationId"]));
-                            operation.StationTypeOperation = new StationTypeOperation();
+                            operation.StationTypeOperation = StationTypeOperationRepository.GetById(Convert.ToInt16(reader["StationTypeOperationId"]));
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
+                // ReSharper disable once PossibleIntendedRethrow
                 throw ex;
             }
 

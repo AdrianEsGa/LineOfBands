@@ -82,12 +82,28 @@ namespace LineOfBands.Database.Controllers
 
         public static List<OperationRegister> GetActiveOperations()
         {
-            throw new NotImplementedException();
+            try
+            {
+                return OperationRegisterRepository.GetActiveOperations();
+            }
+            catch (Exception ex)
+            {
+                // ReSharper disable once PossibleIntendedRethrow
+                throw ex;
+            }
         }
 
         public static List<OperationRegister> GetLastOperations()
         {
-            throw new NotImplementedException();
+            try
+            {
+                return OperationRegisterRepository.GetLastOperations();
+            }
+            catch (Exception ex)
+            {
+                // ReSharper disable once PossibleIntendedRethrow
+                throw ex;
+            }
         }
     }
 }

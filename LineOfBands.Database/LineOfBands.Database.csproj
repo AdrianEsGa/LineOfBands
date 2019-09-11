@@ -69,6 +69,7 @@
     <Compile Include="Repositories\PartRepository.cs" />
     <Compile Include="Repositories\ProductionZoneRepository.cs" />
     <Compile Include="Repositories\StationRepository.cs" />
+    <Compile Include="Repositories\StationTypeOperationRepository.cs" />
     <Compile Include="Repositories\StationTypeRepository.cs" />
   </ItemGroup>
   <ItemGroup>
