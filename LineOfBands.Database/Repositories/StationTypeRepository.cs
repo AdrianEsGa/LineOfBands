@@ -25,12 +25,7 @@ namespace LineOfBands.Database.Repositories
                         command.Parameters.AddWithValue("@Id", id);
                         using (var reader = command.ExecuteReader())
                         {
-                            if (!reader.HasRows)
-                            {
-                                Logger.Insert(LoggerType.Warning, Assembly.GetExecutingAssembly().GetName().Name,
-                                    "StationTypeRepository.GetById()", "Station Type (" + id + ") not found!");
-                                return stationType;
-                            }
+       
 
                             while (reader.Read())
                             {
@@ -43,8 +38,7 @@ namespace LineOfBands.Database.Repositories
             }
             catch (Exception ex)
             {
-                Logger.Insert(LoggerType.Error, Assembly.GetExecutingAssembly().GetName().Name,
-                    "StationTypeRepository.GetById()", ex.Message);
+              
             }
 
             return stationType;
@@ -64,13 +58,7 @@ namespace LineOfBands.Database.Repositories
                     {
                         using (var reader = command.ExecuteReader())
                         {
-                            if (!reader.HasRows)
-                            {
-                                Logger.Insert(LoggerType.Warning, Assembly.GetExecutingAssembly().GetName().Name,
-                                    "StationTypeRepository.GetAll()", "Station types not found!");
-                                return stationTypes;
-                            }
-
+                           
                             while (reader.Read())
                             {
                                 var stationType = new StationType()

@@ -26,12 +26,7 @@ namespace LineOfBands.Database.Repositories
                     {
                         using (var reader = command.ExecuteReader())
                         {
-                            if (!reader.HasRows)
-                            {
-                                Logger.Insert(LoggerType.Warning, Assembly.GetExecutingAssembly().GetName().Name,
-                                    "PalletRepository.GetByCode()", "Lines not found!");
-                                return lines;
-                            }
+                          
 
                             while (reader.Read())
                             {
@@ -50,8 +45,7 @@ namespace LineOfBands.Database.Repositories
             }
             catch (Exception ex)
             {
-                Logger.Insert(LoggerType.Error, Assembly.GetExecutingAssembly().GetName().Name,
-                    "PalletRepository.GetByCode()", ex.Message);
+              
             }
 
             return lines;
@@ -83,10 +77,8 @@ namespace LineOfBands.Database.Repositories
             }
             catch (Exception ex)
             {
-                TranResult = TransactionResult.NoSuccsesfull;
-                TranMessage = ex.Message;
-                Logger.Insert(LoggerType.Error, Assembly.GetExecutingAssembly().GetName().Name,
-                    "LineRepository.SaveOrUpdate()", ex.Message);
+              
+             
             }
 
             return line;
@@ -111,10 +103,7 @@ namespace LineOfBands.Database.Repositories
             }
             catch (Exception ex)
             {
-                TranResult = TransactionResult.NoSuccsesfull;
-                TranMessage = ex.Message;
-                Logger.Insert(LoggerType.Error, Assembly.GetExecutingAssembly().GetName().Name,
-                    "LineRepository.Remove()", ex.Message);
+               
             }
         }
 
@@ -132,12 +121,7 @@ namespace LineOfBands.Database.Repositories
                         command.Parameters.AddWithValue("@Id", id);
                         using (var reader = command.ExecuteReader())
                         {
-                            if (!reader.HasRows)
-                            {
-                                Logger.Insert(LoggerType.Warning, Assembly.GetExecutingAssembly().GetName().Name,
-                                    "LineRepository.GetById()", "Line (" + id + ") not found!");
-                                return line;
-                            }
+                          
 
                             while (reader.Read())
                             {
@@ -151,8 +135,7 @@ namespace LineOfBands.Database.Repositories
             }
             catch (Exception ex)
             {
-                Logger.Insert(LoggerType.Error, Assembly.GetExecutingAssembly().GetName().Name,
-                    "LineRepository.GetById()", ex.Message);
+             
             }
 
             return line;

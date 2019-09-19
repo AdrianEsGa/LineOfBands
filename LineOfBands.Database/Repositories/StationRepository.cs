@@ -63,12 +63,7 @@ namespace LineOfBands.Database.Repositories
 
                         using (var reader = command.ExecuteReader())
                         {
-                            if (!reader.HasRows)
-                            {
-                                Logger.Insert(LoggerType.Warning, Assembly.GetExecutingAssembly().GetName().Name,
-                                    "StationRepository.GetByCode()", "Station (" + code + ") not found!");
-                                return station;
-                            }
+              
 
                             while (reader.Read())
                             {
@@ -85,8 +80,7 @@ namespace LineOfBands.Database.Repositories
             }
             catch (Exception ex)
             {
-                Logger.Insert(LoggerType.Error, Assembly.GetExecutingAssembly().GetName().Name,
-                    "StationRepository.GetByCode()", ex.Message);
+             
             }
 
             return station;
@@ -106,12 +100,7 @@ namespace LineOfBands.Database.Repositories
                     {
                         using (var reader = command.ExecuteReader())
                         {
-                            if (!reader.HasRows)
-                            {
-                                Logger.Insert(LoggerType.Warning, Assembly.GetExecutingAssembly().GetName().Name,
-                                    "StationRepository.GetAll()", "Station not found!");
-                                return stations;
-                            }
+         
 
                             while (reader.Read())
                             {

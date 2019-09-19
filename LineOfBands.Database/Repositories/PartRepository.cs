@@ -76,8 +76,7 @@ namespace LineOfBands.Database.Repositories
             }
             catch (Exception ex)
             {
-                Logger.Insert(LoggerType.Error, Assembly.GetExecutingAssembly().GetName().Name,
-                    "PartRepository.SaveOrUpdate()", ex.Message);
+             
             }
 
             return part;

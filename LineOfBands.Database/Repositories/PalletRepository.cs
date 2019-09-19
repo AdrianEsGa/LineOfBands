@@ -99,8 +99,7 @@ namespace LineOfBands.Database.Repositories
             }
             catch (Exception ex)
             {             
-                Logger.Insert(LoggerType.Error, Assembly.GetExecutingAssembly().GetName().Name,
-                    "PalletRepository.SaveOrUpdate()", ex.Message);
+             
             }
 
             return pallet;
@@ -125,8 +124,7 @@ namespace LineOfBands.Database.Repositories
             catch (Exception ex)
             {
  
-                Logger.Insert(LoggerType.Error, Assembly.GetExecutingAssembly().GetName().Name,
-                    "PalletRepository.SaveOrUpdate()", ex.Message);
+              
             }
         }
 

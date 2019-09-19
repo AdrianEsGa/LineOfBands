@@ -24,7 +24,7 @@ namespace LineOfBands.Database.Repositories
                 {
                     var strSql = operationRegister.Id == 0 ? "INSERT INTO OperationRegisters (OperationInId, OperationOutId, PalletId, MoldId, PartId, InitDateTime, EndDateTime)" +
                         " VALUES (@OperationInId, @OperationOutId, @PalletId, @MoldId, @PartId, @InitDateTime, @EndDateTime) SELECT Scope_Identity() "
-                        : "UPDATE OperationRegisters SET OperationInId=@OperationInId, OperationOutId=@OperationOutId, PalletId=@PalletId, MoldId=@PalletId, PartId=@PartId, InitDateTime=@InitDateTime, EndDateTime=@EndDateTime WHERE Id = @Id";
+                        : "UPDATE OperationRegisters SET OperationInId=@OperationInId, OperationOutId=@OperationOutId, PalletId=@PalletId, MoldId=@MoldId, PartId=@PartId, InitDateTime=@InitDateTime, EndDateTime=@EndDateTime WHERE Id = @Id";
 
                     using (var command = new SqlCommand(strSql, connection))
                     {
@@ -61,8 +61,7 @@ namespace LineOfBands.Database.Repositories
             }
             catch (Exception ex)
             {
-                Logger.Insert(LoggerType.Error, Assembly.GetExecutingAssembly().GetName().Name,
-                    "StationRepository.SaveOrUpdate()", ex.Message);
+              
             }
 
             return operationRegister;
@@ -169,7 +168,7 @@ namespace LineOfBands.Database.Repositories
             {
                 using (var connection = SqlServer.OpenConnection())
                 {
-                    const string strSql = "SELECT TOP 10 Id, OperationInId, PalletId, MoldId, PartId, InitDateTime FROM OperationRegisters WHERE EndDateTime IS NOT NULL  ORDER BY EndDateTime DESC";
+                    const string strSql = "SELECT TOP 10 Id, OperationInId, OperationOutId, PalletId, MoldId, PartId, InitDateTime, EndDateTime FROM OperationRegisters WHERE EndDateTime IS NOT NULL  ORDER BY EndDateTime DESC";
 
                     using (var command = new SqlCommand(strSql, connection))
                     {
@@ -182,6 +181,8 @@ namespace LineOfBands.Database.Repositories
                                     Id = int.Parse(reader["Id"].ToString()),
                                     OperationIn =
                                         OperationRepository.GetById(int.Parse(reader["OperationInId"].ToString())),
+                                    OperationOut =
+                                        OperationRepository.GetById(int.Parse(reader["OperationOutId"].ToString())),
                                     Mold = MoldRepository.GetById(int.Parse(reader["MoldId"].ToString())),
                                     Pallet = PalletRepository.GetById(int.Parse(reader["PalletId"].ToString()))
                                 };
@@ -190,6 +191,7 @@ namespace LineOfBands.Database.Repositories
                                     operationRegister.Part = PartRepository.GetById(int.Parse(reader["PartId"].ToString()));
 
                                 operationRegister.InitDateTime = (DateTime)reader["InitDateTime"];
+                                operationRegister.EndDateTime = (DateTime)reader["EndDateTime"];
 
                                 operationRegisters.Add(operationRegister);
                             }

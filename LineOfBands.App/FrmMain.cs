@@ -41,7 +41,7 @@ namespace LineOfBands.App
        
             try
             {
-                SqlServer.ConnectionString = "Server=localhost;Database=LineOfBands;User Id=sa;Password=1234;";
+                SqlServer.ConnectionString = "Server=DESKTOP-3K5JSL0\\TRAZA;Database=LineOfBands;User Id=sa;Password=1234;";
                 InitializeStations();
 
                 ViewController.Show(View.UcRegisterOperations);
@@ -354,9 +354,6 @@ namespace LineOfBands.App
             {
                 if (!S7.GetBitAt(AppGlobal.Snap7Server.Read(station.StatusChangeS7), 0, 0)) continue;
 
-                //Thread.Sleep(5000);
-                AppGlobal.Snap7Server.WriteBit(station.StatusChangeS7, false);
-
                 var data = AppGlobal.Snap7Server.Read(station.DataAddressS7);
                 station.DataContent = Common.GetDataContent(data);
 
@@ -366,8 +363,7 @@ namespace LineOfBands.App
 
                 OperationRegisterController.Register(station, pallet, operation, mold);
 
-                //Thread.Sleep(5000);
-                AppGlobal.Snap7Server.WriteBit(station.StatusChangeS7Ack, true);
+                AppGlobal.Snap7Server.WriteWord(station.StatusChangeS7Ack, (ushort) operation.Code);
             }
 
             TimerS7ComunicationStatus.Start();

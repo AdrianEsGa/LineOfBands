@@ -68,3 +68,16 @@ D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands
 D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands.Database\obj\Debug\LineOfBands.Database.csproj.CopyComplete
 D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands.Database\obj\Debug\LineOfBands.Database.dll
 D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands.Database\obj\Debug\LineOfBands.Database.pdb
+D:\Datos\LineOfBands\LineOfBands.Database\bin\Debug\LineOfBands.Database.dll
+D:\Datos\LineOfBands\LineOfBands.Database\bin\Debug\LineOfBands.Database.pdb
+D:\Datos\LineOfBands\LineOfBands.Database\bin\Debug\LineOfBands.Common.dll
+D:\Datos\LineOfBands\LineOfBands.Database\bin\Debug\LineOfBands.Opc.dll
+D:\Datos\LineOfBands\LineOfBands.Database\bin\Debug\LineOfBands.Snap7.dll
+D:\Datos\LineOfBands\LineOfBands.Database\bin\Debug\LineOfBands.Common.pdb
+D:\Datos\LineOfBands\LineOfBands.Database\bin\Debug\LineOfBands.Opc.pdb
+D:\Datos\LineOfBands\LineOfBands.Database\bin\Debug\LineOfBands.Snap7.pdb
+D:\Datos\LineOfBands\LineOfBands.Database\obj\Debug\LineOfBands.Database.csprojAssemblyReference.cache
+D:\Datos\LineOfBands\LineOfBands.Database\obj\Debug\LineOfBands.Database.csproj.CoreCompileInputs.cache
+D:\Datos\LineOfBands\LineOfBands.Database\obj\Debug\LineOfBands.Database.csproj.CopyComplete
+D:\Datos\LineOfBands\LineOfBands.Database\obj\Debug\LineOfBands.Database.dll
+D:\Datos\LineOfBands\LineOfBands.Database\obj\Debug\LineOfBands.Database.pdb

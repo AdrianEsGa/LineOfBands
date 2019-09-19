@@ -123,8 +123,7 @@ namespace LineOfBands.Database.Repositories
             }
             catch (Exception ex)
             {
-                Logger.Insert(LoggerType.Error, Assembly.GetExecutingAssembly().GetName().Name,
-                    "ProductionOrderRepository.SaveOrUpdate()", ex.Message);
+              
             }
 
             return ProductionOrder;
