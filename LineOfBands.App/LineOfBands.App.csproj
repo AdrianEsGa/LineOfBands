@@ -91,6 +91,12 @@
     <Compile Include="Forms\UcRegisterOperations.Designer.cs">
       <DependentUpon>UcRegisterOperations.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\UcStationTypes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UcStationTypes.Designer.cs">
+      <DependentUpon>UcStationTypes.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,9 @@
     <EmbeddedResource Include="Forms\UcRegisterOperations.resx">
       <DependentUpon>UcRegisterOperations.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UcStationTypes.resx">
+      <DependentUpon>UcStationTypes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,6 +144,7 @@
     <None Include="Properties\DataSources\LineOfBands.Common.Domain.Station.datasource" />
     <None Include="Properties\DataSources\LineOfBands.Database.Entities.OperationRegister.datasource" />
     <None Include="Properties\DataSources\LineOfBands.Database.Entities.Station.datasource" />
+    <None Include="Properties\DataSources\LineOfBands.Database.Entities.StationType.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

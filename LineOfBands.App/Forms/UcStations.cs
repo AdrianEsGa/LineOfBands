@@ -109,6 +109,7 @@ namespace LineOfBands.App.Forms
             {
                 if(_selectedStation.Id == 0) return;
                 StationController.Remove(_selectedStation);
+                New();
             }
             catch (Exception ex)
             {
@@ -135,6 +136,9 @@ namespace LineOfBands.App.Forms
             txtCode.Text = _selectedStation.Code.ToString();
             txtName.Text = _selectedStation.Name;
             cmbType.SelectedItem = _selectedStation.Type;
+            txtStatusDataChangeAddress.Text = _selectedStation.StatusDataChangeAddress;
+            txtStatusDataChangeAddressAck.Text = _selectedStation.StatusDataChangeAddressAck;
+            txtDataAddress.Text = _selectedStation.DataAddress;
         }
 
         private void BindingControlsToData()
@@ -142,6 +146,9 @@ namespace LineOfBands.App.Forms
             _selectedStation.Code = int.Parse(txtCode.Text);
             _selectedStation.Name = txtName.Text;
             _selectedStation.Type = (StationType) cmbType.SelectedItem;
+            _selectedStation.StatusDataChangeAddress = txtStatusDataChangeAddress.Text;
+            _selectedStation.StatusDataChangeAddressAck = txtStatusDataChangeAddressAck.Text;
+            _selectedStation.DataAddress = txtDataAddress.Text;
         }
 
         #endregion

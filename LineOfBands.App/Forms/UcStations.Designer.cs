@@ -50,11 +50,16 @@
             this.pnContent = new MetroFramework.Controls.MetroPanel();
             this.tabControlContent = new MetroFramework.Controls.MetroTabControl();
             this.tabData = new MetroFramework.Controls.MetroTabPage();
+            this.txtDataAddress = new MetroFramework.Controls.MetroTextBox();
+            this.txtStatusDataChangeAddressAck = new MetroFramework.Controls.MetroTextBox();
+            this.txtStatusDataChangeAddress = new MetroFramework.Controls.MetroTextBox();
+            this.lblDataAddress = new MetroFramework.Controls.MetroLabel();
+            this.lblStatusDataChangeAddressAck = new MetroFramework.Controls.MetroLabel();
+            this.lblStatusDataChangeAddress = new MetroFramework.Controls.MetroLabel();
             this.tabSearch = new MetroFramework.Controls.MetroTabPage();
             this.DataGridSearch = new MetroFramework.Controls.MetroGrid();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lineDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataChangeAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -95,7 +100,7 @@
             this.txtCode.CustomButton.UseWaitCursor = true;
             this.txtCode.CustomButton.Visible = false;
             this.txtCode.Lines = new string[0];
-            this.txtCode.Location = new System.Drawing.Point(129, 28);
+            this.txtCode.Location = new System.Drawing.Point(213, 28);
             this.txtCode.MaxLength = 32767;
             this.txtCode.Name = "txtCode";
             this.txtCode.PasswordChar = '\0';
@@ -116,7 +121,7 @@
             this.cmbType.FontSize = MetroFramework.MetroComboBoxSize.Small;
             this.cmbType.FormattingEnabled = true;
             this.cmbType.ItemHeight = 19;
-            this.cmbType.Location = new System.Drawing.Point(129, 86);
+            this.cmbType.Location = new System.Drawing.Point(213, 92);
             this.cmbType.Name = "cmbType";
             this.cmbType.Size = new System.Drawing.Size(155, 25);
             this.cmbType.TabIndex = 2;
@@ -137,7 +142,7 @@
             this.txtName.CustomButton.UseSelectable = true;
             this.txtName.CustomButton.Visible = false;
             this.txtName.Lines = new string[0];
-            this.txtName.Location = new System.Drawing.Point(129, 57);
+            this.txtName.Location = new System.Drawing.Point(213, 60);
             this.txtName.MaxLength = 32767;
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
@@ -227,7 +232,7 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(33, 57);
+            this.lblName.Location = new System.Drawing.Point(33, 60);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(59, 19);
             this.lblName.TabIndex = 15;
@@ -236,7 +241,7 @@
             // lblType
             // 
             this.lblType.AutoSize = true;
-            this.lblType.Location = new System.Drawing.Point(33, 86);
+            this.lblType.Location = new System.Drawing.Point(33, 92);
             this.lblType.Name = "lblType";
             this.lblType.Size = new System.Drawing.Size(35, 19);
             this.lblType.TabIndex = 16;
@@ -320,6 +325,12 @@
             // 
             // tabData
             // 
+            this.tabData.Controls.Add(this.txtDataAddress);
+            this.tabData.Controls.Add(this.txtStatusDataChangeAddressAck);
+            this.tabData.Controls.Add(this.txtStatusDataChangeAddress);
+            this.tabData.Controls.Add(this.lblDataAddress);
+            this.tabData.Controls.Add(this.lblStatusDataChangeAddressAck);
+            this.tabData.Controls.Add(this.lblStatusDataChangeAddress);
             this.tabData.Controls.Add(this.lblCode);
             this.tabData.Controls.Add(this.lblName);
             this.tabData.Controls.Add(this.txtName);
@@ -337,6 +348,132 @@
             this.tabData.VerticalScrollbarBarColor = true;
             this.tabData.VerticalScrollbarHighlightOnWheel = false;
             this.tabData.VerticalScrollbarSize = 10;
+            // 
+            // txtDataAddress
+            // 
+            // 
+            // 
+            // 
+            this.txtDataAddress.CustomButton.Image = null;
+            this.txtDataAddress.CustomButton.Location = new System.Drawing.Point(133, 1);
+            this.txtDataAddress.CustomButton.Name = "";
+            this.txtDataAddress.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtDataAddress.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtDataAddress.CustomButton.TabIndex = 1;
+            this.txtDataAddress.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtDataAddress.CustomButton.UseSelectable = true;
+            this.txtDataAddress.CustomButton.UseWaitCursor = true;
+            this.txtDataAddress.CustomButton.Visible = false;
+            this.txtDataAddress.Lines = new string[0];
+            this.txtDataAddress.Location = new System.Drawing.Point(213, 190);
+            this.txtDataAddress.MaxLength = 32767;
+            this.txtDataAddress.Name = "txtDataAddress";
+            this.txtDataAddress.PasswordChar = '\0';
+            this.txtDataAddress.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtDataAddress.SelectedText = "";
+            this.txtDataAddress.SelectionLength = 0;
+            this.txtDataAddress.SelectionStart = 0;
+            this.txtDataAddress.ShortcutsEnabled = true;
+            this.txtDataAddress.Size = new System.Drawing.Size(155, 23);
+            this.txtDataAddress.TabIndex = 22;
+            this.txtDataAddress.UseSelectable = true;
+            this.txtDataAddress.UseWaitCursor = true;
+            this.txtDataAddress.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtDataAddress.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // txtStatusDataChangeAddressAck
+            // 
+            // 
+            // 
+            // 
+            this.txtStatusDataChangeAddressAck.CustomButton.Image = null;
+            this.txtStatusDataChangeAddressAck.CustomButton.Location = new System.Drawing.Point(133, 1);
+            this.txtStatusDataChangeAddressAck.CustomButton.Name = "";
+            this.txtStatusDataChangeAddressAck.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtStatusDataChangeAddressAck.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtStatusDataChangeAddressAck.CustomButton.TabIndex = 1;
+            this.txtStatusDataChangeAddressAck.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtStatusDataChangeAddressAck.CustomButton.UseSelectable = true;
+            this.txtStatusDataChangeAddressAck.CustomButton.UseWaitCursor = true;
+            this.txtStatusDataChangeAddressAck.CustomButton.Visible = false;
+            this.txtStatusDataChangeAddressAck.Lines = new string[0];
+            this.txtStatusDataChangeAddressAck.Location = new System.Drawing.Point(213, 158);
+            this.txtStatusDataChangeAddressAck.MaxLength = 32767;
+            this.txtStatusDataChangeAddressAck.Name = "txtStatusDataChangeAddressAck";
+            this.txtStatusDataChangeAddressAck.PasswordChar = '\0';
+            this.txtStatusDataChangeAddressAck.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtStatusDataChangeAddressAck.SelectedText = "";
+            this.txtStatusDataChangeAddressAck.SelectionLength = 0;
+            this.txtStatusDataChangeAddressAck.SelectionStart = 0;
+            this.txtStatusDataChangeAddressAck.ShortcutsEnabled = true;
+            this.txtStatusDataChangeAddressAck.Size = new System.Drawing.Size(155, 23);
+            this.txtStatusDataChangeAddressAck.TabIndex = 21;
+            this.txtStatusDataChangeAddressAck.UseSelectable = true;
+            this.txtStatusDataChangeAddressAck.UseWaitCursor = true;
+            this.txtStatusDataChangeAddressAck.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtStatusDataChangeAddressAck.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // txtStatusDataChangeAddress
+            // 
+            // 
+            // 
+            // 
+            this.txtStatusDataChangeAddress.CustomButton.Image = null;
+            this.txtStatusDataChangeAddress.CustomButton.Location = new System.Drawing.Point(133, 1);
+            this.txtStatusDataChangeAddress.CustomButton.Name = "";
+            this.txtStatusDataChangeAddress.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtStatusDataChangeAddress.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtStatusDataChangeAddress.CustomButton.TabIndex = 1;
+            this.txtStatusDataChangeAddress.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtStatusDataChangeAddress.CustomButton.UseSelectable = true;
+            this.txtStatusDataChangeAddress.CustomButton.UseWaitCursor = true;
+            this.txtStatusDataChangeAddress.CustomButton.Visible = false;
+            this.txtStatusDataChangeAddress.Lines = new string[0];
+            this.txtStatusDataChangeAddress.Location = new System.Drawing.Point(213, 126);
+            this.txtStatusDataChangeAddress.MaxLength = 32767;
+            this.txtStatusDataChangeAddress.Name = "txtStatusDataChangeAddress";
+            this.txtStatusDataChangeAddress.PasswordChar = '\0';
+            this.txtStatusDataChangeAddress.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtStatusDataChangeAddress.SelectedText = "";
+            this.txtStatusDataChangeAddress.SelectionLength = 0;
+            this.txtStatusDataChangeAddress.SelectionStart = 0;
+            this.txtStatusDataChangeAddress.ShortcutsEnabled = true;
+            this.txtStatusDataChangeAddress.Size = new System.Drawing.Size(155, 23);
+            this.txtStatusDataChangeAddress.TabIndex = 20;
+            this.txtStatusDataChangeAddress.UseSelectable = true;
+            this.txtStatusDataChangeAddress.UseWaitCursor = true;
+            this.txtStatusDataChangeAddress.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtStatusDataChangeAddress.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // lblDataAddress
+            // 
+            this.lblDataAddress.AutoSize = true;
+            this.lblDataAddress.Location = new System.Drawing.Point(33, 188);
+            this.lblDataAddress.Name = "lblDataAddress";
+            this.lblDataAddress.Size = new System.Drawing.Size(136, 19);
+            this.lblDataAddress.TabIndex = 19;
+            this.lblDataAddress.Text = "Dirección PLC - Datos";
+            this.lblDataAddress.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lblStatusDataChangeAddressAck
+            // 
+            this.lblStatusDataChangeAddressAck.AutoSize = true;
+            this.lblStatusDataChangeAddressAck.Location = new System.Drawing.Point(33, 156);
+            this.lblStatusDataChangeAddressAck.Name = "lblStatusDataChangeAddressAck";
+            this.lblStatusDataChangeAddressAck.Size = new System.Drawing.Size(161, 19);
+            this.lblStatusDataChangeAddressAck.TabIndex = 18;
+            this.lblStatusDataChangeAddressAck.Text = "Dirección PLC - Respuesta";
+            this.lblStatusDataChangeAddressAck.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lblStatusDataChangeAddress
+            // 
+            this.lblStatusDataChangeAddress.AutoSize = true;
+            this.lblStatusDataChangeAddress.Location = new System.Drawing.Point(33, 124);
+            this.lblStatusDataChangeAddress.Name = "lblStatusDataChangeAddress";
+            this.lblStatusDataChangeAddress.Size = new System.Drawing.Size(148, 19);
+            this.lblStatusDataChangeAddress.TabIndex = 17;
+            this.lblStatusDataChangeAddress.Text = "Dirección PLC - Petición";
+            this.lblStatusDataChangeAddress.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // tabSearch
             // 
@@ -373,7 +510,6 @@
             this.DataGridSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
             this.codeDataGridViewTextBoxColumn,
-            this.lineDataGridViewTextBoxColumn,
             this.nameDataGridViewTextBoxColumn,
             this.typeDataGridViewTextBoxColumn,
             this.statusDataChangeAddressDataGridViewTextBoxColumn,
@@ -429,13 +565,6 @@
             this.codeDataGridViewTextBoxColumn.DataPropertyName = "Code";
             this.codeDataGridViewTextBoxColumn.HeaderText = "Código";
             this.codeDataGridViewTextBoxColumn.Name = "codeDataGridViewTextBoxColumn";
-            // 
-            // lineDataGridViewTextBoxColumn
-            // 
-            this.lineDataGridViewTextBoxColumn.DataPropertyName = "Line";
-            this.lineDataGridViewTextBoxColumn.HeaderText = "Line";
-            this.lineDataGridViewTextBoxColumn.Name = "lineDataGridViewTextBoxColumn";
-            this.lineDataGridViewTextBoxColumn.Visible = false;
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -586,5 +715,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataAddressOpcDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataContentDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource stationBindingSource;
+        private MetroFramework.Controls.MetroLabel lblStatusDataChangeAddress;
+        private MetroFramework.Controls.MetroTextBox txtDataAddress;
+        private MetroFramework.Controls.MetroTextBox txtStatusDataChangeAddressAck;
+        private MetroFramework.Controls.MetroTextBox txtStatusDataChangeAddress;
+        private MetroFramework.Controls.MetroLabel lblDataAddress;
+        private MetroFramework.Controls.MetroLabel lblStatusDataChangeAddressAck;
     }
 }

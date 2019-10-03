@@ -72,7 +72,7 @@
             // BtnProductionOrders
             // 
             this.BtnProductionOrders.ActiveControl = null;
-            this.BtnProductionOrders.Location = new System.Drawing.Point(16, 306);
+            this.BtnProductionOrders.Location = new System.Drawing.Point(16, 360);
             this.BtnProductionOrders.Name = "BtnProductionOrders";
             this.BtnProductionOrders.Size = new System.Drawing.Size(181, 104);
             this.BtnProductionOrders.TabIndex = 3;
@@ -82,7 +82,7 @@
             // BtnParts
             // 
             this.BtnParts.ActiveControl = null;
-            this.BtnParts.Location = new System.Drawing.Point(203, 306);
+            this.BtnParts.Location = new System.Drawing.Point(203, 360);
             this.BtnParts.Name = "BtnParts";
             this.BtnParts.Size = new System.Drawing.Size(181, 104);
             this.BtnParts.TabIndex = 4;

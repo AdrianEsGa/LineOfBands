@@ -24,7 +24,11 @@ namespace LineOfBands.App
 
                     case View.UcStations:
                         view = new UcStations() { Dock = DockStyle.Fill };
-                        break;     
+                        break;
+
+                    case View.UcStationTypes:
+                        view = new UcStationTypes() { Dock = DockStyle.Fill };
+                        break;
                 }
 
                 FrmMain.Instance.Container.Controls.Add(view);
@@ -43,6 +47,7 @@ namespace LineOfBands.App
     {
         UcRegisterOperations,
         UcMenu,
-        UcStations
+        UcStations,
+        UcStationTypes
     }
 }

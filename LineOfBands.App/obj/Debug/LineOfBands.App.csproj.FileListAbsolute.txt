@@ -160,6 +160,7 @@ D:\Datos\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.Forms.UcStations.
 D:\Datos\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.Forms.FrmStationsSearch.resources
 D:\Datos\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.Forms.UcMenu.resources
 D:\Datos\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.Forms.UcRegisterOperations.resources
+D:\Datos\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.Forms.UcStationTypes.resources
 D:\Datos\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.FrmMain.resources
 D:\Datos\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.Properties.Resources.resources
 D:\Datos\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.csproj.GenerateResource.cache

@@ -16,7 +16,7 @@ namespace LineOfBands.App.Forms
 
         private void BtnStationTypes_Click(object sender, System.EventArgs e)
         {
-
+            ViewController.Show(View.UcStationTypes);
         }
 
         private void BtnBack_Click(object sender, System.EventArgs e)

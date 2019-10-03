@@ -24,6 +24,7 @@ D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands
 D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands.Opc\obj\Debug\LineOfBands.Opc.pdb
 D:\Datos\LineOfBands\LineOfBands.Opc\bin\Debug\LineOfBands.Opc.dll
 D:\Datos\LineOfBands\LineOfBands.Opc\bin\Debug\LineOfBands.Opc.pdb
+D:\Datos\LineOfBands\LineOfBands.Opc\obj\Debug\LineOfBands.Opc.csprojAssemblyReference.cache
 D:\Datos\LineOfBands\LineOfBands.Opc\obj\Debug\LineOfBands.Opc.csproj.CoreCompileInputs.cache
 D:\Datos\LineOfBands\LineOfBands.Opc\obj\Debug\LineOfBands.Opc.dll
 D:\Datos\LineOfBands\LineOfBands.Opc\obj\Debug\LineOfBands.Opc.pdb
