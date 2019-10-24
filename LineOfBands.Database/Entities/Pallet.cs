@@ -5,8 +5,7 @@
         public int Id { get; set; }
         public int Code { get; set; }
         public Line Line { get; set; }
-        public Mold Mold { get; set; }
-
+      
         public Pallet()
         {
             Id = -1;

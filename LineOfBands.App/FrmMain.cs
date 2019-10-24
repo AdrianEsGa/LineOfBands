@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Threading;
 using System.Windows.Forms;
 using LineOfBands.App.Forms;
 using LineOfBands.Common;
 using LineOfBands.Database.Controllers;
+using LineOfBands.Database.Entities;
 using LineOfBands.Database.Repositories;
 using LineOfBands.Opc;
 using LineOfBands.Snap7;
@@ -13,39 +15,38 @@ namespace LineOfBands.App
 {
     public partial class FrmMain : MetroFramework.Forms.MetroForm
     {
-        private static FrmMain _instance;
+        //-----------------------------------------------------------------------
+        #region ESQUEMA DE FORMULARIO
 
+        #region 1. DECLARACIÓN DE VARIABLES
         public static FrmMain Instance
         {
             get { return _instance ?? (_instance = new FrmMain()); }
         }
-
+        private static FrmMain _instance; // Preguntar Adrian se crea un objeto para manejar el formulario
         public MetroPanel Container
         {
             get { return ContentPanel; }
             set { ContentPanel = value; }
         }
 
-        #region 0. Inicializaciones
+        #endregion
 
-        /// Código generado por visual estido - Controles, etc.
-        public FrmMain()
+        #region 2. CARGAMOS EL FORMULARIO
+        #region 2.0 Inicializaciones
+
+        public FrmMain()        /// Código generado por visual estido - Controles, etc.
         {
             InitializeComponent();
-           _instance = this;
+            _instance = this;
         }
-
-        /// el primer evento que ejecuta siempre esté definido.
-        private void Main_Load(object sender, EventArgs e)
+        private void Main_Load(object sender, EventArgs e)/// el primer evento que ejecuta siempre esté definido.
         {
-       
             try
             {
                 SqlServer.ConnectionString = "Server=DESKTOP-3K5JSL0\\TRAZA;Database=LineOfBands;User Id=sa;Password=1234;";
                 InitializeStations();
-
                 ViewController.Show(View.UcRegisterOperations);
-   
             }
             catch (Exception ex)
             {
@@ -53,20 +54,82 @@ namespace LineOfBands.App
             }
         }
 
-
+        #endregion
         #endregion
 
-        #region 1. Declaraciones
+        #region 3. FORMULARIO - EVENTOS 
 
-        #endregion
+        #region 3.1 Temporizadores
 
-        #region 2. Funciones propias del formulario
-
-        // Cargamos estaciones de BD.
-
-        private void InitializeStations()
+        //Motor de la aplicación Estaciones, Bandejas, Moldes, Operaciones, Ordenes de fabricación y piezas
+        private void TimerComunicationStatus_Tick(object sender, EventArgs e)
         {
-            
+            TimerS7ComunicationStatus.Stop();
+
+            foreach (var station in AppGlobal.Stations)
+            {
+                if (station.Bussy) continue;
+
+                if (!S7.GetBitAt(AppGlobal.Snap7Server.Read(station.StatusChangeS7), 0, 0)) continue;
+
+                var data = AppGlobal.Snap7Server.Read(station.DataAddressS7);
+                station.DataContent = Common.GetDataContent(data);
+
+                var pallet = PalletController.GetByCode(station.DataContent.PalletCode);
+                var operation = OperationController.GetByCode(station.DataContent.OperationCode);
+                var mold = MoldRepository.GetByCode(station.DataContent.MoldCode);
+
+                station.ActiveOperation = operation;
+              
+                if (operation.InitPart)
+                {
+                    station.Bussy = true;
+                    Thread AskForReferencePartThread = new Thread(new ThreadStart(() => AskForReferencePart(station, pallet, operation, mold)));
+                    AskForReferencePartThread.Start();
+                }
+                else
+                {
+                    OperationRegisterController.Register(station, pallet, operation, mold, "Pieza 1");
+                    AppGlobal.Snap7Server.WriteWord(station.StatusChangeS7Ack, (ushort)operation.Code);
+                }
+            }
+
+            TimerS7ComunicationStatus.Start();
+        }
+
+        private void AskForReferencePart(Station station, Pallet pallet, Operation operation, Mold mold)
+        {
+
+            var reference = string.Empty;
+            FrmPartReference frmPartReference = new FrmPartReference();
+            frmPartReference.ShowDialog();
+            reference = frmPartReference.Reference;
+
+            OperationRegisterController.Register(station, pallet, operation, mold, reference);
+
+            AppGlobal.Snap7Server.WriteWord(station.StatusChangeS7Ack, (ushort)operation.Code);
+
+            station.Bussy = false;
+        }
+
+        #endregion
+
+        #region 3.2 Menu
+
+        #endregion
+
+        #region 3.3 Botones
+
+        #endregion
+
+        #endregion
+
+        #region 4. FUNCIONES DEL FORMULARIO
+
+        #region 4.1 Inicialización
+        private void InitializeStations()// Cargamos estaciones de BD.
+        {
+
             try
             {
                 if (AppGlobal.ComunicationProtocol == ComunicationProtocol.Snap7)
@@ -82,6 +145,7 @@ namespace LineOfBands.App
                     }
 
                     TimerS7ComunicationStatus.Start();
+                   // TimerStateStations.Start();
                 }
                 else
                 {
@@ -118,12 +182,121 @@ namespace LineOfBands.App
 
         #endregion
 
-        #region 3. Comunicaciones
+        #region 4.2 Validaciones
 
 
-        #region 3.1 OPC - Protocolo de cumunicación
+        #endregion
+
+        #region 4.3 Refresco de información en el formulario
+
+        #endregion
+
+        #region 4.4 PLC
+
+        #endregion
+
+        #region 4.4 Lectores CDB
+
+        #endregion
+
+        #region 4.5 Impresoras
+
+        #endregion
+
+        #region 4.6 Base de datos SQL
+
+        #endregion
+
+        #region 4.7 Pruebas
+
+        #endregion
+
+        #endregion
+        #endregion
+
+
+        //-----------------------------------------------------------------------
+
+        #region BORRAR
+
+        #region OPC - Protocolo de cumunicación
 
         #region Initialize
+        private static void TransferStationGroup_DataChange(object sender, Group.DataChangeArgs e)
+        {
+
+
+        }
+
+        private static void UnmoldStation2Group_DataChange(object sender, Group.DataChangeArgs e)
+        {
+
+        }
+
+        private static void UnmoldStation1Group_DataChange(object sender, Group.DataChangeArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void OvenStation10Group_DataChange(object sender, Group.DataChangeArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void OvenStation9Group_DataChange(object sender, Group.DataChangeArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void OvenStation8Group_DataChange(object sender, Group.DataChangeArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void OvenStation7Group_DataChange(object sender, Group.DataChangeArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void OvenStation6Group_DataChange(object sender, Group.DataChangeArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void OvenStation5Group_DataChange(object sender, Group.DataChangeArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void OvenStation4Group_DataChange(object sender, Group.DataChangeArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void OvenStation3Group_DataChange(object sender, Group.DataChangeArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void OvenStation2Group_DataChange(object sender, Group.DataChangeArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void OvenStation1Group_DataChange(object sender, Group.DataChangeArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void FillStation2Group_DataChange(object sender, Group.DataChangeArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void FillStation1Group_DataChange(object sender, Group.DataChangeArgs e)
+        {
+            throw new NotImplementedException();
+        }
 
         private void InitializeOpc()
         {
@@ -260,125 +433,25 @@ namespace LineOfBands.App
 
         #region Events
 
-        private static void TransferStationGroup_DataChange(object sender, Group.DataChangeArgs e)
-        {
-
-
-        }
-
-        private static void UnmoldStation2Group_DataChange(object sender, Group.DataChangeArgs e)
-        {
-
-        }
-
-        private static void UnmoldStation1Group_DataChange(object sender, Group.DataChangeArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private static void OvenStation10Group_DataChange(object sender, Group.DataChangeArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private static void OvenStation9Group_DataChange(object sender, Group.DataChangeArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private static void OvenStation8Group_DataChange(object sender, Group.DataChangeArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private static void OvenStation7Group_DataChange(object sender, Group.DataChangeArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private static void OvenStation6Group_DataChange(object sender, Group.DataChangeArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private static void OvenStation5Group_DataChange(object sender, Group.DataChangeArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private static void OvenStation4Group_DataChange(object sender, Group.DataChangeArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private static void OvenStation3Group_DataChange(object sender, Group.DataChangeArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private static void OvenStation2Group_DataChange(object sender, Group.DataChangeArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private static void OvenStation1Group_DataChange(object sender, Group.DataChangeArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private static void FillStation2Group_DataChange(object sender, Group.DataChangeArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private static void FillStation1Group_DataChange(object sender, Group.DataChangeArgs e)
-        {
-            throw new NotImplementedException();
-        }
 
         #endregion
 
         #endregion
 
+        #endregion
+
+        #region 3. Comunicaciones
+
+
+
+
 
         #endregion
 
-        #region 4. Temporizadores - Hilos del formulario
 
-        //Comunicación con el PLC- Registro de operaciones 
-        private void TimerComunicationStatus_Tick(object sender, EventArgs e)
-        {
-            TimerS7ComunicationStatus.Stop();
 
-            foreach (var station in AppGlobal.Stations)
-            {
-                if (!S7.GetBitAt(AppGlobal.Snap7Server.Read(station.StatusChangeS7), 0, 0)) continue;
 
-                var data = AppGlobal.Snap7Server.Read(station.DataAddressS7);
-                station.DataContent = Common.GetDataContent(data);
 
-                var pallet = PalletController.GetByCode(station.DataContent.PalletCode);
-                var operation = OperationController.GetByCode(station.DataContent.OperationCode);
-                var mold = MoldRepository.GetByCode(station.DataContent.MoldCode);
-
-                OperationRegisterController.Register(station, pallet, operation, mold);
-
-                AppGlobal.Snap7Server.WriteWord(station.StatusChangeS7Ack, (ushort) operation.Code);
-            }
-
-            TimerS7ComunicationStatus.Start();
-
-        }
-
-        #endregion
-
-        #region 5. Formulario
-
-        #region 5.1 Menu Items
-
-        #endregion
-
-        #endregion
 
     }
 }

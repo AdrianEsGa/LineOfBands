@@ -67,6 +67,12 @@
     <Compile Include="Forms\FrmLinesSearch.Designer.cs">
       <DependentUpon>FrmLinesSearch.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmPartReference.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPartReference.Designer.cs">
+      <DependentUpon>FrmPartReference.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\UcStations.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -111,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmLinesSearch.resx">
       <DependentUpon>FrmLinesSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPartReference.resx">
+      <DependentUpon>FrmPartReference.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UcStations.resx">
       <DependentUpon>UcStations.cs</DependentUpon>

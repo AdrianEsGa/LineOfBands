@@ -7,7 +7,7 @@ namespace LineOfBands.Database.Controllers
 {
     public static class  OperationRegisterController
     {
-        public static void Register(Station station, Pallet pallet, Operation operation, Mold mold)
+        public static void Register(Station station, Pallet pallet, Operation operation, Mold mold, string partReference)
         {
             if (operation.Type == OperationType.In)
             {
@@ -17,16 +17,24 @@ namespace LineOfBands.Database.Controllers
             {
                 if (operation.LoadMold)
                 {
-                    CreateProductionOrder(pallet, mold);                 
+                    FinalizeProductionOrder(pallet);
+                    CreateProductionOrder(station, pallet, mold);                 
                 }
 
                 if (operation.InitPart)
                 {
-                    CreatePart(pallet);                  
+                    CreatePart(pallet, partReference);                  
                 }
 
                 FinalizeRegisterOperation(pallet, operation);
             }
+
+            station.ActiveProductionOrder = ProductionOrderController.GetActiveByPallet(pallet);
+        }
+
+        private static void FinalizeProductionOrder(Pallet pallet)
+        {
+            ProductionOrderRepository.ChangeStatus(ProductionOrderRepository.GetActiveByPallet(pallet), ProductionOrderStatus.Finalized); 
         }
 
         private static void StartRegisterOperation(Pallet pallet, Mold mold, Operation operation)
@@ -37,7 +45,7 @@ namespace LineOfBands.Database.Controllers
                 InitDateTime = DateTime.Now,
                 Mold = mold,
                 OperationIn = operation,
-                Part = ProductionOrderRepository.GetByPallet(pallet).ActivePart
+                Part = ProductionOrderRepository.GetActiveByPallet(pallet).ActivePart
             };
 
             OperationRegisterRepository.SaveOrUpdate(operationRegister);
@@ -52,15 +60,15 @@ namespace LineOfBands.Database.Controllers
             OperationRegisterRepository.SaveOrUpdate(operationRegister);
         }
 
-        private static void CreatePart(Pallet pallet)
+        private static void CreatePart(Pallet pallet, string reference)
         {
-            var productionOrder = ProductionOrderRepository.GetByPallet(pallet);
+            var productionOrder = ProductionOrderRepository.GetActiveByPallet(pallet);
 
             var part = new Part
             {
                 ProductionOrder = productionOrder,
                 FabricationDate = DateTime.Now,
-                Reference = "123456565465"
+                Reference = reference
             };
 
             productionOrder.ActivePart = part;
@@ -68,15 +76,16 @@ namespace LineOfBands.Database.Controllers
             ProductionOrderRepository.SaveOrUpdate(part.ProductionOrder);
         }
 
-        private static void CreateProductionOrder(Pallet pallet, Mold mold)
+        private static void CreateProductionOrder(Station station, Pallet pallet, Mold mold)
         {
-            pallet.Mold = mold;
             var productionOrder = new ProductionOrder
             {
                 Mold = mold,
                 Pallet = pallet,
+                Status = ProductionOrderStatus.Active
             };
 
+            station.ActiveProductionOrder = productionOrder;
             ProductionOrderRepository.SaveOrUpdate(productionOrder);
         }
 

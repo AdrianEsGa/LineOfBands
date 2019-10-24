@@ -42,6 +42,7 @@
     <Compile Include="Controllers\OperationController.cs" />
     <Compile Include="Controllers\OperationRegisterController.cs" />
     <Compile Include="Controllers\PalletController.cs" />
+    <Compile Include="Controllers\ProductionOrderController.cs" />
     <Compile Include="Controllers\StationController.cs" />
     <Compile Include="Controllers\StationTypeController.cs" />
     <Compile Include="Entities\Check.cs" />

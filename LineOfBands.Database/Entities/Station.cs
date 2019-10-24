@@ -14,7 +14,9 @@ namespace LineOfBands.Database.Entities
         public string StatusDataChangeAddress { get; set; }
         public string StatusDataChangeAddressAck { get; set; }
         public string DataAddress { get; set; }
-
+        public ProductionOrder ActiveProductionOrder { get; set; }
+        public Operation ActiveOperation { get; set; }
+          
         //Snap7 Items
         public S7Item StatusChangeS7 { get; set; }
         public S7Item StatusChangeS7Ack { get; set; }
@@ -27,6 +29,8 @@ namespace LineOfBands.Database.Entities
 
         //Snap7 or OPC data content
         public DataContent DataContent {get; set; }
+
+        public bool Bussy { get; set; }
 
         public Station() {}
 

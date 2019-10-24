@@ -34,7 +34,7 @@ namespace LineOfBands.Database.Repositories
                             {
                                 part.Id = Convert.ToInt32(reader["Id"]);
                                 part.Reference = reader["Reference"].ToString();
-                                part.ProductionOrder = ProductionOrderRepository.GetById(Convert.ToInt32(reader["ProductionOrderId"]));
+                              //  part.ProductionOrder = ProductionOrderRepository.GetById(Convert.ToInt32(reader["ProductionOrderId"]));
                                 part.FabricationDate = Convert.ToDateTime(reader["FabricationDate"]);
                             }
                         }

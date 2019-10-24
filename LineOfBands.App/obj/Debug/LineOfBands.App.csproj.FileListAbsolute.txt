@@ -156,6 +156,7 @@ D:\Datos\LineOfBands\LineOfBands.App\bin\Debug\LineOfBands.Snap7.pdb
 D:\Datos\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.csprojAssemblyReference.cache
 D:\Datos\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.Forms.FrmLines.resources
 D:\Datos\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.Forms.FrmLinesSearch.resources
+D:\Datos\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.Forms.FrmPartReference.resources
 D:\Datos\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.Forms.UcStations.resources
 D:\Datos\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.Forms.FrmStationsSearch.resources
 D:\Datos\LineOfBands\LineOfBands.App\obj\Debug\LineOfBands.App.Forms.UcMenu.resources

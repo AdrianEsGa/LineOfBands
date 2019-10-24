@@ -7,10 +7,10 @@ using System.Reflection;
 namespace LineOfBands.Database.Repositories
 {
 
-    public static class ProductionOrderRepository
+    internal static class ProductionOrderRepository
     {
 
-        public static ProductionOrder GetById(int id)
+        internal static ProductionOrder GetById(int id)
         {
 
             var productionOrder = new ProductionOrder();
@@ -49,15 +49,15 @@ namespace LineOfBands.Database.Repositories
             return productionOrder;
         }
 
-        public static ProductionOrder GetByPallet(Pallet pallet)
+        internal static ProductionOrder GetActiveByPallet(Pallet pallet)
         {
             var productionOrder = new ProductionOrder();
             try
             {
-              
+
                 using (var connection = SqlServer.OpenConnection())
                 {
-                    var strSql = "SELECT Id, PalletId, MoldId, PartId, Status FROM ProductionOrders WHERE PalletId=@PalletId";
+                    var strSql = "SELECT Id, PalletId, MoldId, PartId, Status FROM ProductionOrders WHERE Status = 1 AND PalletId=@PalletId";
 
                     using (var command = new SqlCommand(strSql, connection))
                     {
@@ -71,27 +71,24 @@ namespace LineOfBands.Database.Repositories
                                 productionOrder.Pallet = pallet;
                                 productionOrder.Mold = MoldRepository.GetById(int.Parse(reader["MoldId"].ToString()));
 
-                                if(reader["PartId"] != DBNull.Value)
+                                if (reader["PartId"] != DBNull.Value)
                                     productionOrder.ActivePart = PartRepository.GetById(int.Parse(reader["PartId"].ToString()));
 
                                 productionOrder.Status = (ProductionOrderStatus)int.Parse(reader["Status"].ToString());
                             }
                         }
                     }
-                }
-               
-
+                }             
             }
             catch (Exception ex)
             {
-        //Introducir en el futuro codigo para NLog.
+                throw ex;
             }
 
             return productionOrder;
-
         }
 
-        public static ProductionOrder SaveOrUpdate(ProductionOrder ProductionOrder)
+        internal static ProductionOrder SaveOrUpdate(ProductionOrder ProductionOrder)
         {
             try
             {
@@ -130,7 +127,31 @@ namespace LineOfBands.Database.Repositories
 
         }
 
-        public static void Remove(ProductionOrder ProductionOrder)
+        internal static void ChangeStatus(ProductionOrder productionOrder, ProductionOrderStatus status)
+        {
+            try
+            {
+                using (var connection = SqlServer.OpenConnection())
+                {
+                    var strSql = "UPDATE ProductionOrders SET Status=@Status WHERE Id = @Id";
+
+                    using (var command = new SqlCommand(strSql, connection))
+                    {
+                        command.Parameters.AddWithValue("@Id", productionOrder.Id);
+                        command.Parameters.AddWithValue("@Status", status);                        
+                        command.ExecuteNonQuery();
+                        // Para el INSERT, DELETE Y UPDATE se utiliza el ExecuteNonQuery porque no devuelve nada             
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
+        internal static void Remove(ProductionOrder ProductionOrder)
         {
 
         }
