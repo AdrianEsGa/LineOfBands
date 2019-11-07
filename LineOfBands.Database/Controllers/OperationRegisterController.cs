@@ -9,6 +9,8 @@ namespace LineOfBands.Database.Controllers
     {
         public static void Register(Station station, Pallet pallet, Operation operation, Mold mold, string partReference)
         {
+            station.ActiveProductionOrder = ProductionOrderController.GetActiveByPallet(pallet);
+
             if (operation.Type == OperationType.In)
             {
                 StartRegisterOperation(pallet, mold, operation);              
@@ -26,10 +28,18 @@ namespace LineOfBands.Database.Controllers
                     CreatePart(pallet, partReference);                  
                 }
 
+                if (operation.EndPart)
+                {
+                   if(station.ActiveProductionOrder.ActivePart.Reference != partReference)
+                   {
+
+                   }
+                }
+
                 FinalizeRegisterOperation(pallet, operation);
             }
 
-            station.ActiveProductionOrder = ProductionOrderController.GetActiveByPallet(pallet);
+         
         }
 
         private static void FinalizeProductionOrder(Pallet pallet)

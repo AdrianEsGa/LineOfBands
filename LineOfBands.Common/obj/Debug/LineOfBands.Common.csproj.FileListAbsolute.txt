@@ -23,6 +23,7 @@ D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands
 D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands.Common\obj\Debug\LineOfBands.Common.pdb
 D:\Datos\LineOfBands\LineOfBands.Common\bin\Debug\LineOfBands.Common.dll
 D:\Datos\LineOfBands\LineOfBands.Common\bin\Debug\LineOfBands.Common.pdb
+D:\Datos\LineOfBands\LineOfBands.Common\obj\Debug\LineOfBands.Common.csprojAssemblyReference.cache
 D:\Datos\LineOfBands\LineOfBands.Common\obj\Debug\LineOfBands.Common.csproj.CoreCompileInputs.cache
 D:\Datos\LineOfBands\LineOfBands.Common\obj\Debug\LineOfBands.Common.dll
 D:\Datos\LineOfBands\LineOfBands.Common\obj\Debug\LineOfBands.Common.pdb

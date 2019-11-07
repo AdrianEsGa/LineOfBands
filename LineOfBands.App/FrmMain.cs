@@ -81,7 +81,7 @@ namespace LineOfBands.App
 
                 station.ActiveOperation = operation;
               
-                if (operation.InitPart)
+                if (operation.InitPart || operation.EndPart)
                 {
                     station.Bussy = true;
                     Thread AskForReferencePartThread = new Thread(new ThreadStart(() => AskForReferencePart(station, pallet, operation, mold)));

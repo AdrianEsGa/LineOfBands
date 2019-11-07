@@ -41,13 +41,6 @@
             this.ContentPanel = new MetroFramework.Controls.MetroPanel();
             this.LastOpertationsPanel = new MetroFramework.Controls.MetroPanel();
             this.DataGridLastOperations = new MetroFramework.Controls.MetroGrid();
-            this.LastOpertationsDescPanel = new MetroFramework.Controls.MetroPanel();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.ActiveOperationsPanel = new MetroFramework.Controls.MetroPanel();
-            this.DataGridActiveOperations = new MetroFramework.Controls.MetroGrid();
-            this.ActiveOpertationsDescPanel = new MetroFramework.Controls.MetroPanel();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.RefreshTimer = new System.Windows.Forms.Timer(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,6 +50,10 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.operationRegisterBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.LastOpertationsDescPanel = new MetroFramework.Controls.MetroPanel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.ActiveOperationsPanel = new MetroFramework.Controls.MetroPanel();
+            this.DataGridActiveOperations = new MetroFramework.Controls.MetroGrid();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.operationInDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.operationOutDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,15 +62,18 @@
             this.partDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.initDateTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.endDateTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ActiveOpertationsDescPanel = new MetroFramework.Controls.MetroPanel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.RefreshTimer = new System.Windows.Forms.Timer(this.components);
             this.HeadPanel.SuspendLayout();
             this.ContentPanel.SuspendLayout();
             this.LastOpertationsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridLastOperations)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.operationRegisterBindingSource)).BeginInit();
             this.LastOpertationsDescPanel.SuspendLayout();
             this.ActiveOperationsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridActiveOperations)).BeginInit();
             this.ActiveOpertationsDescPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.operationRegisterBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // HeadPanel
@@ -127,9 +127,9 @@
             this.LastOpertationsPanel.HorizontalScrollbarBarColor = true;
             this.LastOpertationsPanel.HorizontalScrollbarHighlightOnWheel = false;
             this.LastOpertationsPanel.HorizontalScrollbarSize = 10;
-            this.LastOpertationsPanel.Location = new System.Drawing.Point(0, 358);
+            this.LastOpertationsPanel.Location = new System.Drawing.Point(0, 359);
             this.LastOpertationsPanel.Name = "LastOpertationsPanel";
-            this.LastOpertationsPanel.Size = new System.Drawing.Size(895, 265);
+            this.LastOpertationsPanel.Size = new System.Drawing.Size(895, 264);
             this.LastOpertationsPanel.TabIndex = 5;
             this.LastOpertationsPanel.VerticalScrollbarBarColor = true;
             this.LastOpertationsPanel.VerticalScrollbarHighlightOnWheel = false;
@@ -189,133 +189,8 @@
             this.DataGridLastOperations.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DataGridLastOperations.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.DataGridLastOperations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGridLastOperations.Size = new System.Drawing.Size(895, 265);
+            this.DataGridLastOperations.Size = new System.Drawing.Size(895, 264);
             this.DataGridLastOperations.TabIndex = 3;
-            // 
-            // LastOpertationsDescPanel
-            // 
-            this.LastOpertationsDescPanel.Controls.Add(this.metroLabel2);
-            this.LastOpertationsDescPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.LastOpertationsDescPanel.HorizontalScrollbarBarColor = true;
-            this.LastOpertationsDescPanel.HorizontalScrollbarHighlightOnWheel = false;
-            this.LastOpertationsDescPanel.HorizontalScrollbarSize = 10;
-            this.LastOpertationsDescPanel.Location = new System.Drawing.Point(0, 332);
-            this.LastOpertationsDescPanel.Name = "LastOpertationsDescPanel";
-            this.LastOpertationsDescPanel.Size = new System.Drawing.Size(895, 26);
-            this.LastOpertationsDescPanel.TabIndex = 4;
-            this.LastOpertationsDescPanel.VerticalScrollbarBarColor = true;
-            this.LastOpertationsDescPanel.VerticalScrollbarHighlightOnWheel = false;
-            this.LastOpertationsDescPanel.VerticalScrollbarSize = 10;
-            // 
-            // metroLabel2
-            // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(3, 3);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(154, 19);
-            this.metroLabel2.TabIndex = 2;
-            this.metroLabel2.Text = "Histórico de operaciones";
-            // 
-            // ActiveOperationsPanel
-            // 
-            this.ActiveOperationsPanel.Controls.Add(this.DataGridActiveOperations);
-            this.ActiveOperationsPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ActiveOperationsPanel.HorizontalScrollbarBarColor = true;
-            this.ActiveOperationsPanel.HorizontalScrollbarHighlightOnWheel = false;
-            this.ActiveOperationsPanel.HorizontalScrollbarSize = 10;
-            this.ActiveOperationsPanel.Location = new System.Drawing.Point(0, 26);
-            this.ActiveOperationsPanel.Name = "ActiveOperationsPanel";
-            this.ActiveOperationsPanel.Size = new System.Drawing.Size(895, 306);
-            this.ActiveOperationsPanel.TabIndex = 3;
-            this.ActiveOperationsPanel.VerticalScrollbarBarColor = true;
-            this.ActiveOperationsPanel.VerticalScrollbarHighlightOnWheel = false;
-            this.ActiveOperationsPanel.VerticalScrollbarSize = 10;
-            // 
-            // DataGridActiveOperations
-            // 
-            this.DataGridActiveOperations.AllowUserToResizeRows = false;
-            this.DataGridActiveOperations.AutoGenerateColumns = false;
-            this.DataGridActiveOperations.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.DataGridActiveOperations.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DataGridActiveOperations.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.DataGridActiveOperations.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridActiveOperations.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.DataGridActiveOperations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridActiveOperations.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.operationInDataGridViewTextBoxColumn,
-            this.operationOutDataGridViewTextBoxColumn,
-            this.palletDataGridViewTextBoxColumn,
-            this.moldDataGridViewTextBoxColumn,
-            this.partDataGridViewTextBoxColumn,
-            this.initDateTimeDataGridViewTextBoxColumn,
-            this.endDateTimeDataGridViewTextBoxColumn});
-            this.DataGridActiveOperations.DataSource = this.operationRegisterBindingSource;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGridActiveOperations.DefaultCellStyle = dataGridViewCellStyle5;
-            this.DataGridActiveOperations.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DataGridActiveOperations.EnableHeadersVisualStyles = false;
-            this.DataGridActiveOperations.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.DataGridActiveOperations.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.DataGridActiveOperations.Location = new System.Drawing.Point(0, 0);
-            this.DataGridActiveOperations.MultiSelect = false;
-            this.DataGridActiveOperations.Name = "DataGridActiveOperations";
-            this.DataGridActiveOperations.ReadOnly = true;
-            this.DataGridActiveOperations.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridActiveOperations.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.DataGridActiveOperations.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.DataGridActiveOperations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGridActiveOperations.Size = new System.Drawing.Size(895, 306);
-            this.DataGridActiveOperations.TabIndex = 2;
-            // 
-            // ActiveOpertationsDescPanel
-            // 
-            this.ActiveOpertationsDescPanel.Controls.Add(this.metroLabel1);
-            this.ActiveOpertationsDescPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ActiveOpertationsDescPanel.HorizontalScrollbarBarColor = true;
-            this.ActiveOpertationsDescPanel.HorizontalScrollbarHighlightOnWheel = false;
-            this.ActiveOpertationsDescPanel.HorizontalScrollbarSize = 10;
-            this.ActiveOpertationsDescPanel.Location = new System.Drawing.Point(0, 0);
-            this.ActiveOpertationsDescPanel.Name = "ActiveOpertationsDescPanel";
-            this.ActiveOpertationsDescPanel.Size = new System.Drawing.Size(895, 26);
-            this.ActiveOpertationsDescPanel.TabIndex = 2;
-            this.ActiveOpertationsDescPanel.VerticalScrollbarBarColor = true;
-            this.ActiveOpertationsDescPanel.VerticalScrollbarHighlightOnWheel = false;
-            this.ActiveOpertationsDescPanel.VerticalScrollbarSize = 10;
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(3, 4);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(133, 19);
-            this.metroLabel1.TabIndex = 2;
-            this.metroLabel1.Text = "Operaciones actuales";
-            // 
-            // RefreshTimer
-            // 
-            this.RefreshTimer.Interval = 1000;
-            this.RefreshTimer.Tick += new System.EventHandler(this.RefreshTimer_Tick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -384,6 +259,102 @@
             // 
             this.operationRegisterBindingSource.DataSource = typeof(LineOfBands.Database.Entities.OperationRegister);
             // 
+            // LastOpertationsDescPanel
+            // 
+            this.LastOpertationsDescPanel.Controls.Add(this.metroLabel2);
+            this.LastOpertationsDescPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.LastOpertationsDescPanel.HorizontalScrollbarBarColor = true;
+            this.LastOpertationsDescPanel.HorizontalScrollbarHighlightOnWheel = false;
+            this.LastOpertationsDescPanel.HorizontalScrollbarSize = 10;
+            this.LastOpertationsDescPanel.Location = new System.Drawing.Point(0, 333);
+            this.LastOpertationsDescPanel.Name = "LastOpertationsDescPanel";
+            this.LastOpertationsDescPanel.Size = new System.Drawing.Size(895, 26);
+            this.LastOpertationsDescPanel.TabIndex = 4;
+            this.LastOpertationsDescPanel.VerticalScrollbarBarColor = true;
+            this.LastOpertationsDescPanel.VerticalScrollbarHighlightOnWheel = false;
+            this.LastOpertationsDescPanel.VerticalScrollbarSize = 10;
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(3, 3);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(154, 19);
+            this.metroLabel2.TabIndex = 2;
+            this.metroLabel2.Text = "Histórico de operaciones";
+            // 
+            // ActiveOperationsPanel
+            // 
+            this.ActiveOperationsPanel.Controls.Add(this.DataGridActiveOperations);
+            this.ActiveOperationsPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ActiveOperationsPanel.HorizontalScrollbarBarColor = true;
+            this.ActiveOperationsPanel.HorizontalScrollbarHighlightOnWheel = false;
+            this.ActiveOperationsPanel.HorizontalScrollbarSize = 10;
+            this.ActiveOperationsPanel.Location = new System.Drawing.Point(0, 27);
+            this.ActiveOperationsPanel.Name = "ActiveOperationsPanel";
+            this.ActiveOperationsPanel.Size = new System.Drawing.Size(895, 306);
+            this.ActiveOperationsPanel.TabIndex = 3;
+            this.ActiveOperationsPanel.VerticalScrollbarBarColor = true;
+            this.ActiveOperationsPanel.VerticalScrollbarHighlightOnWheel = false;
+            this.ActiveOperationsPanel.VerticalScrollbarSize = 10;
+            // 
+            // DataGridActiveOperations
+            // 
+            this.DataGridActiveOperations.AllowUserToResizeRows = false;
+            this.DataGridActiveOperations.AutoGenerateColumns = false;
+            this.DataGridActiveOperations.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.DataGridActiveOperations.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DataGridActiveOperations.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.DataGridActiveOperations.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridActiveOperations.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.DataGridActiveOperations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridActiveOperations.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.operationInDataGridViewTextBoxColumn,
+            this.operationOutDataGridViewTextBoxColumn,
+            this.palletDataGridViewTextBoxColumn,
+            this.moldDataGridViewTextBoxColumn,
+            this.partDataGridViewTextBoxColumn,
+            this.initDateTimeDataGridViewTextBoxColumn,
+            this.endDateTimeDataGridViewTextBoxColumn});
+            this.DataGridActiveOperations.DataSource = this.operationRegisterBindingSource;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGridActiveOperations.DefaultCellStyle = dataGridViewCellStyle5;
+            this.DataGridActiveOperations.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DataGridActiveOperations.EnableHeadersVisualStyles = false;
+            this.DataGridActiveOperations.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.DataGridActiveOperations.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.DataGridActiveOperations.Location = new System.Drawing.Point(0, 0);
+            this.DataGridActiveOperations.MultiSelect = false;
+            this.DataGridActiveOperations.Name = "DataGridActiveOperations";
+            this.DataGridActiveOperations.ReadOnly = true;
+            this.DataGridActiveOperations.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridActiveOperations.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.DataGridActiveOperations.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.DataGridActiveOperations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DataGridActiveOperations.Size = new System.Drawing.Size(895, 306);
+            this.DataGridActiveOperations.TabIndex = 2;
+            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
@@ -448,6 +419,35 @@
             this.endDateTimeDataGridViewTextBoxColumn.ReadOnly = true;
             this.endDateTimeDataGridViewTextBoxColumn.Visible = false;
             // 
+            // ActiveOpertationsDescPanel
+            // 
+            this.ActiveOpertationsDescPanel.Controls.Add(this.metroLabel1);
+            this.ActiveOpertationsDescPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ActiveOpertationsDescPanel.HorizontalScrollbarBarColor = true;
+            this.ActiveOpertationsDescPanel.HorizontalScrollbarHighlightOnWheel = false;
+            this.ActiveOpertationsDescPanel.HorizontalScrollbarSize = 10;
+            this.ActiveOpertationsDescPanel.Location = new System.Drawing.Point(0, 0);
+            this.ActiveOpertationsDescPanel.Name = "ActiveOpertationsDescPanel";
+            this.ActiveOpertationsDescPanel.Size = new System.Drawing.Size(895, 27);
+            this.ActiveOpertationsDescPanel.TabIndex = 2;
+            this.ActiveOpertationsDescPanel.VerticalScrollbarBarColor = true;
+            this.ActiveOpertationsDescPanel.VerticalScrollbarHighlightOnWheel = false;
+            this.ActiveOpertationsDescPanel.VerticalScrollbarSize = 10;
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(3, 4);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(133, 19);
+            this.metroLabel1.TabIndex = 2;
+            this.metroLabel1.Text = "Operaciones actuales";
+            // 
+            // RefreshTimer
+            // 
+            this.RefreshTimer.Interval = 1000;
+            this.RefreshTimer.Tick += new System.EventHandler(this.RefreshTimer_Tick);
+            // 
             // UcRegisterOperations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -461,13 +461,13 @@
             this.ContentPanel.ResumeLayout(false);
             this.LastOpertationsPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridLastOperations)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.operationRegisterBindingSource)).EndInit();
             this.LastOpertationsDescPanel.ResumeLayout(false);
             this.LastOpertationsDescPanel.PerformLayout();
             this.ActiveOperationsPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridActiveOperations)).EndInit();
             this.ActiveOpertationsDescPanel.ResumeLayout(false);
             this.ActiveOpertationsDescPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.operationRegisterBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

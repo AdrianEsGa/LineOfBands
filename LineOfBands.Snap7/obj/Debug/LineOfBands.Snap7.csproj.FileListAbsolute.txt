@@ -30,6 +30,7 @@ D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands
 D:\OneDrive\Documentos\1_Formacion\LINEOfBANDS05042019\LineOfBandsPC\LineOfBands.Snap7\obj\Debug\LineOfBands.Snap7.pdb
 D:\Datos\LineOfBands\LineOfBands.Snap7\bin\Debug\LineOfBands.Snap7.dll
 D:\Datos\LineOfBands\LineOfBands.Snap7\bin\Debug\LineOfBands.Snap7.pdb
+D:\Datos\LineOfBands\LineOfBands.Snap7\obj\Debug\LineOfBands.Snap7.csprojAssemblyReference.cache
 D:\Datos\LineOfBands\LineOfBands.Snap7\obj\Debug\LineOfBands.Snap7.csproj.CoreCompileInputs.cache
 D:\Datos\LineOfBands\LineOfBands.Snap7\obj\Debug\LineOfBands.Snap7.dll
 D:\Datos\LineOfBands\LineOfBands.Snap7\obj\Debug\LineOfBands.Snap7.pdb

@@ -6,6 +6,7 @@
         public int Code { get; set; }
         public OperationType Type { get; set; }
         public bool InitPart { get; set; }
+        public bool EndPart { get; set; }
         public bool LoadMold { get; set; }
         public Station Station { get; set; }
         public StationTypeOperation StationTypeOperation { get; set; }

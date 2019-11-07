@@ -10,7 +10,7 @@ namespace LineOfBands.Database.Repositories
     {
         public static Operation GetByCode(int code)
         {
-            const string strSql = "SELECT Id, Code, OperationTypeId, InitPart, LoadMold, StationId, StationTypeOperationId FROM Operations WHERE Code = @Code";
+            const string strSql = "SELECT Id, Code, OperationTypeId, InitPart, EndPart, LoadMold, StationId, StationTypeOperationId FROM Operations WHERE Code = @Code";
             var operation = new Operation();
 
             try
@@ -29,6 +29,7 @@ namespace LineOfBands.Database.Repositories
                                 operation.Code = Convert.ToInt32(reader["Code"]);
                                 operation.Type = (OperationType)Convert.ToInt16(reader["OperationTypeId"]);
                                 operation.InitPart = (bool) reader["InitPart"];
+                                operation.EndPart = (bool)reader["EndPart"];
                                 operation.LoadMold = (bool)reader["LoadMold"];
                                 operation.Station = StationRepository.GetById(Convert.ToInt16(reader["StationId"]));
                                 operation.StationTypeOperation = StationTypeOperationRepository.GetById(Convert.ToInt16(reader["StationTypeOperationId"]));
@@ -48,7 +49,7 @@ namespace LineOfBands.Database.Repositories
 
         public static Operation GetById(int id)
         {
-            const string strSql = "SELECT Id, Code, OperationTypeId, InitPart, LoadMold, StationId, StationTypeOperationId FROM Operations WHERE Id = @Id";
+            const string strSql = "SELECT Id, Code, OperationTypeId, InitPart, EndPart, LoadMold, StationId, StationTypeOperationId FROM Operations WHERE Id = @Id";
             var operation = new Operation();
 
             try
@@ -66,6 +67,7 @@ namespace LineOfBands.Database.Repositories
                             operation.Code = Convert.ToInt32(reader["Code"]);
                             operation.Type = (OperationType)Convert.ToInt16(reader["OperationTypeId"]);
                             operation.InitPart = (bool)reader["InitPart"];
+                            operation.EndPart = (bool)reader["EndPart"];
                             operation.LoadMold = (bool)reader["LoadMold"];
                             operation.Station = StationRepository.GetById(Convert.ToInt16(reader["StationId"]));
                             operation.StationTypeOperation = StationTypeOperationRepository.GetById(Convert.ToInt16(reader["StationTypeOperationId"]));
